@@ -7,7 +7,7 @@ public class SceneLoad : MonoBehaviour
 {
     public void OnStartClick() 
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Modeling");
     }
 
     public void OnInstructionsClick()
