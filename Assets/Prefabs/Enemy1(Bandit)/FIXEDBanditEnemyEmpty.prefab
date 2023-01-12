@@ -1291,7 +1291,7 @@ GameObject:
   - component: {fileID: 3363488039511758685}
   - component: {fileID: 1927141667954636423}
   m_Layer: 0
-  m_Name: Eye
+  m_Name: LeftEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1391,7 +1391,7 @@ GameObject:
   - component: {fileID: 1927141666945306078}
   - component: {fileID: 1927141666945306077}
   m_Layer: 0
-  m_Name: BanditEnemyEmpty
+  m_Name: FIXEDBanditEnemyEmpty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1708,7 +1708,7 @@ GameObject:
   - component: {fileID: 1438742131171533420}
   - component: {fileID: 1927141667814065392}
   m_Layer: 0
-  m_Name: Eye
+  m_Name: RightEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
