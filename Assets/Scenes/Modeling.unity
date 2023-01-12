@@ -1602,9 +1602,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1292869486}
     - target: {fileID: 1927141666945306077, guid: cec420795c803204ebe6340cb6f02512, type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 32848320}
+    - target: {fileID: 1927141666945306077, guid: cec420795c803204ebe6340cb6f02512, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 535770257}
+    - target: {fileID: 1927141666945306077, guid: cec420795c803204ebe6340cb6f02512, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4554851145876142433, guid: cec420795c803204ebe6340cb6f02512, type: 3}
       propertyPath: m_Name
       value: BanditEnemyEmpty
@@ -1629,6 +1637,10 @@ PrefabInstance:
       propertyPath: range
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6536111576609600541, guid: cec420795c803204ebe6340cb6f02512, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 535770257}
     - target: {fileID: 6536111576609600541, guid: cec420795c803204ebe6340cb6f02512, type: 3}
       propertyPath: centrePoint
       value: 
