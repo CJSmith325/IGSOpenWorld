@@ -7,11 +7,11 @@ public class HUD : MonoBehaviour
     public GameObject Weapon1;
     public GameObject Weapon1OB;
 
-    public GameObject Axe3;
-    public GameObject Axe3OB;
+    //public GameObject Axe3;
+    //public GameObject Axe3OB;
 
-    public GameObject knife;
-    public GameObject knifeOB;
+    //public GameObject knife;
+    //public GameObject knifeOB;
 
 
    
@@ -27,21 +27,21 @@ public class HUD : MonoBehaviour
         {
             Weapon1.SetActive(false);
         }
-        if (Axe3OB.activeInHierarchy)
-        {
-            Axe3.SetActive(true);
-        }
-        else
-        {
-            Axe3.SetActive(false);
-        }
-        if (knifeOB.activeInHierarchy)
-        {
-            knife.SetActive(true);
-        }
-        else
-        {
-            knife.SetActive(false);
-        }
+        //if (Axe3OB.activeInHierarchy)
+        //{
+        //    Axe3.SetActive(true);
+        //}
+        //else
+        //{
+        //    Axe3.SetActive(false);
+        //}
+        //if (knifeOB.activeInHierarchy)
+        //{
+        //    knife.SetActive(true);
+        //}
+        //else
+        //{
+        //    knife.SetActive(false);
+        //}
     }
 }
