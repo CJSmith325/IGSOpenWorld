@@ -89,7 +89,9 @@ public class EnemyAi : MonoBehaviour
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
 
-            ///
+          
+                GetComponent<Animator>().Play("EnemyAxeSwing");
+            
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
