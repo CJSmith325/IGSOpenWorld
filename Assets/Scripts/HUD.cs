@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class HUD : MonoBehaviour
 {
     public GameObject Weapon1;
     public GameObject Weapon1OB;
+    public Text HealthText;
+    public int PlayerHealth;
+    public int PlayerMaxHealth;
 
     //public GameObject Axe3;
     //public GameObject Axe3OB;
@@ -19,6 +23,7 @@ public class HUD : MonoBehaviour
 
     void Update()
     {
+        HealthText.text = PlayerHealth + "/" + PlayerMaxHealth;
         if (Weapon1OB.activeInHierarchy)
         {
             Weapon1.SetActive(true);
