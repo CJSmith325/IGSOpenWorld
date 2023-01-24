@@ -7,6 +7,7 @@ public class HUD : MonoBehaviour
 {
     public GameObject Weapon1;
     public GameObject Weapon1OB;
+    public Image HealthImage;
     public Text HealthText;
     public int PlayerHealth;
     public int PlayerMaxHealth;
@@ -24,6 +25,7 @@ public class HUD : MonoBehaviour
     void Update()
     {
         HealthText.text = PlayerHealth + "/" + PlayerMaxHealth;
+        HealthImage.fillAmount = PlayerHealth / PlayerMaxHealth;
         if (Weapon1OB.activeInHierarchy)
         {
             Weapon1.SetActive(true);
