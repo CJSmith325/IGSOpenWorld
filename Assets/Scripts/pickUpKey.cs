@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pickUpKey : MonoBehaviour
+public class PickUpKey : MonoBehaviour
 {
     public GameObject keyOB;
     public GameObject invOB;
     public GameObject pickUpText;
-    public AudioSource keySound;
+    //public AudioSource keySound;
 
     public bool inReach;
 
@@ -41,7 +41,7 @@ public class pickUpKey : MonoBehaviour
         if (inReach && Input.GetButtonDown("Interact"))
         {
             keyOB.SetActive(false);
-            keySound.Play();
+            //keySound.Play();
             invOB.SetActive(true);
             pickUpText.SetActive(false);
         }
