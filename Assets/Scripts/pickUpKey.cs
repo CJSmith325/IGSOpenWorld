@@ -13,6 +13,7 @@ public class pickUpKey : MonoBehaviour
 
     void Start()
     {
+        keyOB.SetActive(true);
         inReach = false;
         pickUpText.SetActive(false);
         invOB.SetActive(false);
@@ -20,7 +21,7 @@ public class pickUpKey : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Reach")
+        if(other.gameObject.tag == "Reach")
         {
             inReach = true;
             pickUpText.SetActive(true);
