@@ -506,13 +506,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 2126622528729355028}
   speed: 12
-  gravity: -19.62
+  sprintMod: 1.5
+  crouchMod: 0.5
   jumpHeight: 1
-  groundCheck: {fileID: 2126622528474258526}
+  slideMod: 2
+  isGrounded: 0
   groundDistance: 0.4
+  groundCheck: {fileID: 2126622528474258526}
   groundMask:
     serializedVersion: 2
     m_Bits: 1024
+  capsule: {fileID: 2126622528729355031}
 --- !u!114 &2126622528729355026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,6 +531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weapon1: {fileID: 2126622528162424686}
   Weapon1OB: {fileID: 2126622528162424686}
+  HealthImage: {fileID: 0}
   HealthText: {fileID: 1293870562455842824}
   PlayerHealth: 100
   PlayerMaxHealth: 100
@@ -1069,8 +1074,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5445cc2caa1415542a51b258a29d1105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 1000
+  mouseSensitivity: 100
   playerBody: {fileID: 2126622528729355031}
+  startFOV: 0
+  sprintFOV: 0
+  camMultiplier: 0
+  mainCam: {fileID: 2126622529485552236}
 --- !u!1 &2126622529639107988
 GameObject:
   m_ObjectHideFlags: 0
