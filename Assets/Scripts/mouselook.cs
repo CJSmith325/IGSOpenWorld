@@ -10,6 +10,11 @@ public class mouselook : MonoBehaviour
 
     float xRotation = 0f;
 
+    //FOV change
+    public float startFOV, sprintFOV;
+    public float camMultiplier;
+    public Camera mainCam;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +24,7 @@ public class mouselook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
@@ -27,5 +33,17 @@ public class mouselook : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
+
+        //sprint FOV changes
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            mainCam.fieldOfView = Mathf.Lerp(mainCam.fieldOfView, sprintFOV, camMultiplier * Time.deltaTime);
+        }
+        else
+        {
+            mainCam.fieldOfView = Mathf.Lerp(mainCam.fieldOfView, startFOV, camMultiplier * Time.deltaTime);
+        }
+
+
     }
 }
