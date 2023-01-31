@@ -20,12 +20,21 @@ public class PlayerMovement : MonoBehaviour
 
     //touching grass
     public bool isGrounded;
-    public float groundDistance = 2f;
+    public float groundDistance = 1f;
+    private float startY = 1f;
+    private float crouchY = .5f;
+    public float currentY;
     public Transform groundCheck;
     public LayerMask groundMask;
 
+
     //player morphs
     public Transform capsule;
+
+    private void Start()
+    {
+        currentY = startY;
+    }
 
     // Update is called once per frame
     void Update()
@@ -50,7 +59,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.DrawRay((this.transform.position), Vector3.down * 3f, Color.cyan);        //testing ray
 
-            capsule.transform.localScale = new Vector3(1.0f, 0.5f, 1.0f);
+            currentY = Mathf.Lerp(currentY, crouchY, 10f * Time.deltaTime);
+            capsule.transform.localScale = new Vector3(1.0f, currentY, 1.0f);
             if (z > 0 && slideTimer > 0)
             {
                 controller.Move(move * speed * slideMod * Time.deltaTime);
@@ -64,7 +74,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            capsule.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            currentY = Mathf.Lerp(currentY, startY, 10f * Time.deltaTime);
+            capsule.transform.localScale = new Vector3(1.0f, currentY, 1.0f);
             controller.Move(move * speed * Time.deltaTime);
             slideTimer = 1f;
         }
