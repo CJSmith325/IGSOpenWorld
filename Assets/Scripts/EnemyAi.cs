@@ -73,9 +73,6 @@ public class EnemyAi : MonoBehaviour
     private void ChasePlayer()
     {
         agent.SetDestination(player.position);
-
-        
-        GetComponent<Animator>().Play("EnemyAxePullOut");
     }
 
     private void AttackPlayer()
