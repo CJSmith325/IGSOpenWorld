@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class HUD : MonoBehaviour
 {
+
+    public static HUD Instance;
+
     public GameObject Weapon1;
     public GameObject Weapon1OB;
     public Image HealthImage;
@@ -19,7 +22,10 @@ public class HUD : MonoBehaviour
     //public GameObject knifeOB;
 
 
-   
+    private void Start()
+    {
+        Instance = this;
+    }
 
 
     void Update()
