@@ -4911,9 +4911,9 @@ GameObject:
   - component: {fileID: 7095802211618137835}
   - component: {fileID: 7095802211618137832}
   - component: {fileID: 7095802211618137833}
-  - component: {fileID: 7437428981286151566}
+  - component: {fileID: 8297180813886823552}
   m_Layer: 9
-  m_Name: Axe_Test
+  m_Name: Axe_Test3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4968,7 +4968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14291069c8bec4f4cbbd8ea060ca2107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7437428981286151566
+--- !u!114 &8297180813886823552
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4980,8 +4980,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07a4548d47775c41a4daba22eaea481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 40
-  durability: 90
+  baseDamage: 120
+  durability: 300
   attackSpeed: 0
   attackRange: 0
 --- !u!1 &7095802212003937791
@@ -9848,7 +9848,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 90efeecdebc28494faf3bef9a17f3fbe, type: 2}
+  - {fileID: 2100000, guid: 298fee0a248f7b04d88e790cb693f3c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
