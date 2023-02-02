@@ -228,7 +228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 38345328}
   - component: {fileID: 38345327}
-  - component: {fileID: 38345326}
+  - component: {fileID: 38345329}
   m_Layer: 0
   m_Name: Key/Keycard (1)
   m_TagString: Untagged
@@ -236,22 +236,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &38345326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38345325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d63c2073aea56242ab278d5d9be0ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyOB: {fileID: 38345325}
-  invOB: {fileID: 494151004}
-  pickUpText: {fileID: 1594017426}
-  inReach: 0
 --- !u!65 &38345327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -286,6 +270,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 39.09, z: 0}
+--- !u!114 &38345329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38345325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d411e14d93dc84abcfd6edc5a4d8d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyOB: {fileID: 38345325}
+  invOB: {fileID: 494151004}
+  pickUpText: {fileID: 1594017426}
+  inReach: 0
 --- !u!1 &309079038
 GameObject:
   m_ObjectHideFlags: 0
