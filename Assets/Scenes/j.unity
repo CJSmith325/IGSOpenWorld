@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6998
+  m_Name: pb_Mesh-1352
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -440,6 +440,14 @@ PrefabInstance:
     - target: {fileID: 2126622528729355016, guid: c8084cebb4f17dc47afcf84f329843d9, type: 3}
       propertyPath: jumpHeight
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126622528729355026, guid: c8084cebb4f17dc47afcf84f329843d9, type: 3}
+      propertyPath: PlayerRegen
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126622528729355026, guid: c8084cebb4f17dc47afcf84f329843d9, type: 3}
+      propertyPath: PlayerHealth
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2126622529699846513, guid: c8084cebb4f17dc47afcf84f329843d9, type: 3}
       propertyPath: m_Type

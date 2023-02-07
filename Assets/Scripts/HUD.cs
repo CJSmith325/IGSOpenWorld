@@ -12,6 +12,9 @@ public class HUD : MonoBehaviour
     public GameObject Weapon1OB;
     public Image HealthImage;
     public Text HealthText;
+    public float regenTimer;
+    public float fill;
+    public int PlayerRegen;
     public int PlayerHealth;
     public int PlayerMaxHealth;
 
@@ -30,8 +33,24 @@ public class HUD : MonoBehaviour
 
     void Update()
     {
-        //HealthText.text = PlayerHealth + "/" + PlayerMaxHealth;
-        //HealthImage.fillAmount = PlayerHealth / PlayerMaxHealth;
+        HealthText.text = PlayerHealth + "/" + PlayerMaxHealth;
+        
+        regenTimer += Time.deltaTime;
+        if (regenTimer >= 1)
+        {
+            PlayerHealth += PlayerRegen;
+            if (PlayerHealth > PlayerMaxHealth)
+            {
+                PlayerHealth = PlayerMaxHealth;
+            }
+            regenTimer = 0;
+        }
+        fill = (PlayerHealth * 100 / PlayerMaxHealth);
+        HealthImage.fillAmount = fill / 100;
+        if (PlayerHealth <= 0)
+        {
+            //death mechanics go here
+        }
         if (Weapon1OB.activeInHierarchy)
         {
             Weapon1.SetActive(true);

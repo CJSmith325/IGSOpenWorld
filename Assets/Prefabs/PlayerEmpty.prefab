@@ -512,6 +512,7 @@ MonoBehaviour:
   slideMod: 2
   isGrounded: 0
   groundDistance: 0.4
+  currentY: 0
   groundCheck: {fileID: 2126622528474258526}
   groundMask:
     serializedVersion: 2
@@ -531,8 +532,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weapon1: {fileID: 2126622528162424686}
   Weapon1OB: {fileID: 2126622528162424686}
-  HealthImage: {fileID: 0}
+  HealthImage: {fileID: 2126622529699846513}
   HealthText: {fileID: 1293870562455842824}
+  regenTimer: 0
+  PlayerRegen: 1
   PlayerHealth: 100
   PlayerMaxHealth: 100
 --- !u!114 &2126622528729355029
