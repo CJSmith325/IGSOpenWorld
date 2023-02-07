@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
+    public static Respawn Instance;
     public bool TouchingSpawn = false;
     public Transform Player;
     public Transform SpawnPoint;
     private Vector3 SpawnLocation;
     public KeyCode respawn;
     public KeyCode SetSpawn;
+    //public GameObject Reach;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +44,7 @@ public class Respawn : MonoBehaviour
         HUD.Instance.PlayerHealth = HUD.Instance.PlayerMaxHealth;
         Debug.Log("PlayerHealth: " + HUD.Instance.PlayerHealth);
         Debug.Log("SpawnLocation: " + SpawnLocation + "\tplayerLocation: " + Player.transform.position);
+        Time.timeScale = 1;
 
     }
 
