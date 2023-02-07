@@ -16,13 +16,14 @@ public class Respawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
         SpawnLocation = SpawnPoint.transform.position; //Sets Player SpawnLocation to Spawnpoint Position.
 
     }
     // Update is called once per frame
     void Update()
     {
-        if (TouchingSpawn = true & Input.GetKeyDown(SetSpawn))
+        if (TouchingSpawn == true & Input.GetKeyDown(SetSpawn))
         {
             SpawnPointSelection();
         }
@@ -52,7 +53,7 @@ public class Respawn : MonoBehaviour
     {
         SpawnLocation = Player.transform.position;
     }
-    void OnTriggerEnter(Collider other)
+/*    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Respawn")
         {
@@ -65,5 +66,5 @@ public class Respawn : MonoBehaviour
         {
             TouchingSpawn = false;
         }
-    }
+    }   */
 }
