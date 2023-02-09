@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayTest.unity
     guid: a546b631cf281bf4dbec02693a3aa70d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/OpenWorldScene.unity
     guid: 24f9c43041e33924793d0665a5496330
   - enabled: 1
