@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    //public GameObject SpawnText;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +21,6 @@ public class Checkpoint : MonoBehaviour
         {
             //Debug.Log("A Spawnpoint is being Touched. - reach 1");
             Respawn.Instance.TouchingSpawn = true;
-            
         }
     }
     void OnTriggerExit(Collider other)
