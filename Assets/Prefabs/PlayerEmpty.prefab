@@ -1079,9 +1079,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 100
   playerBody: {fileID: 2126622528729355031}
-  startFOV: 0
-  sprintFOV: 0
-  camMultiplier: 0
+  startFOV: 70
+  sprintFOV: 90
+  camMultiplier: 10
   mainCam: {fileID: 2126622529485552236}
 --- !u!1 &2126622529639107988
 GameObject:
