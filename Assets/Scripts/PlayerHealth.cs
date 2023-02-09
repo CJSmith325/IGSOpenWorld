@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public int health; //Keeps track of current health
-    public int maxHealth = 10; //Max full health
+    public int maxHealth = 100; //Max full health
 
     // Start is called before the first frame update
     void Start()
