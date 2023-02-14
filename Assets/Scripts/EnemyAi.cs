@@ -3,6 +3,12 @@ using UnityEngine.AI;
 
 public class EnemyAi : MonoBehaviour
 {
+    public GameObject guardposition;
+
+    private bool EnemyGuard;
+
+    public Transform Guard;
+
     public NavMeshAgent agent;
 
     public Transform player;
@@ -35,10 +41,25 @@ public class EnemyAi : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
+        //Check if the enemy is a guard
+        if (this.gameObject.tag == "Guard")
+        {
+            EnemyGuard = true;
+        }
 
-        if (!playerInSightRange && !playerInAttackRange) Patroling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInAttackRange && playerInSightRange) AttackPlayer();
+
+        if (EnemyGuard == true)
+        {
+            if (!playerInSightRange) Idle();
+            if (playerInSightRange && !playerInAttackRange) ChasePlayer();
+            if (playerInAttackRange && playerInSightRange) AttackPlayer();
+        }
+        else
+        {
+            if (!playerInSightRange && !playerInAttackRange) Patroling();
+            if (playerInSightRange && !playerInAttackRange) ChasePlayer();
+            if (playerInAttackRange && playerInSightRange) AttackPlayer();
+        }
     }
 
 
@@ -101,5 +122,13 @@ public class EnemyAi : MonoBehaviour
     private void ResetAttack()
     {
         alreadyAttacked = false;
+    }
+
+    private void Idle()
+    {
+        if (guardposition.transform.position != Guard.transform.position)
+        {
+            Guard.position = guardposition.transform.position;
+        }
     }
 }
