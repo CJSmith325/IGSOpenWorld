@@ -3,11 +3,11 @@ using UnityEngine.AI;
 
 public class EnemyAi : MonoBehaviour
 {
+    //Guard Stuff
     public GameObject guardposition;
-
     private bool EnemyGuard;
-
     public Transform Guard;
+
 
     public NavMeshAgent agent;
 

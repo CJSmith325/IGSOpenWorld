@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Reach
   - Water
+  - Guard
   layers:
   - Default
   - TransparentFX
