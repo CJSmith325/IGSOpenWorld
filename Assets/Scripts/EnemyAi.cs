@@ -23,16 +23,21 @@ public class EnemyAi : MonoBehaviour
     //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
+    public int attackDamage;
     //public GameObject projectile;
 
     //States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    //Scripts
+    public HUD playerHUD;
+
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        playerHUD = GameObject.Find("Player").GetComponent<HUD>();
     }
 
     private void Update()
@@ -113,7 +118,7 @@ public class EnemyAi : MonoBehaviour
 
             //GetComponent<Animator>().Play("EnemyAxeSwing");
 
-
+            playerHUD.TakeDamage(attackDamage + Random.Range(0, 10));
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }

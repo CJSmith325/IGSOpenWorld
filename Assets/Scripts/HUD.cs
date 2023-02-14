@@ -76,4 +76,12 @@ public class HUD : MonoBehaviour
         //    knife.SetActive(false);
         //}
     }
+    public void TakeDamage(int dmg)
+    {
+        PlayerHealth -= dmg;
+        if (PlayerHealth <= 0)
+        {
+             //death mechanic go here
+        }
+    }
 }
