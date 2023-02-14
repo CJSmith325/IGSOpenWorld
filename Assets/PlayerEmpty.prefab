@@ -293,7 +293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8156409149579964003, guid: 2e9c9a5c5750c1f4a8009bf0c28bb825, type: 3}
       propertyPath: m_Name
-      value: PlayerEmpty (1)
+      value: PlayerEmpty
       objectReference: {fileID: 0}
     - target: {fileID: 8156409149579964003, guid: 2e9c9a5c5750c1f4a8009bf0c28bb825, type: 3}
       propertyPath: m_StaticEditorFlags

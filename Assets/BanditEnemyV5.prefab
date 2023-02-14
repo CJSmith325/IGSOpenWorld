@@ -112,6 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a405eecf2a9a0004f8d544986d460c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guardposition: {fileID: 0}
+  Guard: {fileID: 0}
   agent: {fileID: 989676920624893934}
   player: {fileID: 0}
   whatIsGround:
@@ -123,10 +125,12 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 10
   timeBetweenAttacks: 2
+  attackDamage: 15
   sightRange: 20
   attackRange: 0.5
   playerInSightRange: 1
   playerInAttackRange: 1
+  playerHUD: {fileID: 0}
 --- !u!195 &989676920624893934
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -509,7 +513,9 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1745466086, guid: e8b9d20714c5e674287c5a09fd5ae18b, type: 3}
+    - {fileID: 1892851121, guid: e8b9d20714c5e674287c5a09fd5ae18b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e8b9d20714c5e674287c5a09fd5ae18b, type: 3}
 --- !u!4 &5892656970618526307 stripped
 Transform:
