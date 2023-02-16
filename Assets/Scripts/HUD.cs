@@ -18,11 +18,14 @@ public class HUD : MonoBehaviour
     public int PlayerHealth;
     public int PlayerMaxHealth;
 
-    //public GameObject Axe3;
-    //public GameObject Axe3OB;
+    public GameObject Weapon2;
+    public GameObject Weapon2OB;
 
-    //public GameObject knife;
-    //public GameObject knifeOB;
+    public GameObject Weapon3;
+    public GameObject Weapon3OB;
+
+    public GameObject Weapon4;
+    public GameObject Weapon4OB;
 
 
     private void Start()
@@ -59,22 +62,30 @@ public class HUD : MonoBehaviour
         {
             Weapon1.SetActive(false);
         }
-        //if (Axe3OB.activeInHierarchy)
-        //{
-        //    Axe3.SetActive(true);
-        //}
-        //else
-        //{
-        //    Axe3.SetActive(false);
-        //}
-        //if (knifeOB.activeInHierarchy)
-        //{
-        //    knife.SetActive(true);
-        //}
-        //else
-        //{
-        //    knife.SetActive(false);
-        //}
+        if (Weapon2OB.activeInHierarchy)
+        {
+            Weapon2.SetActive(true);
+        }
+        else
+        {
+            Weapon2.SetActive(false);
+        }
+        if (Weapon3OB.activeInHierarchy)
+        {
+            Weapon3.SetActive(true);
+        }
+        else
+        {
+            Weapon3.SetActive(false);
+        }
+        if (Weapon4OB.activeInHierarchy)
+        {
+            Weapon4.SetActive(true);
+        }
+        else
+        {
+            Weapon4.SetActive(false);
+        }
     }
     public void TakeDamage(int dmg)
     {
