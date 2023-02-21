@@ -5,43 +5,66 @@ using UnityEngine;
 public class WeaponStats : MonoBehaviour
 {
 
+    public GameObject Weapon;
+
     //basic attack vars
-    public float baseDamage, durability, attackSpeed, attackRange;
+    public float baseDamage, damageValue, durability, attackSpeed, attackRange;
 
     //damage mods
     public float critMod, critChance, critDamage;
 
     //attack timers
-    public float attackTime, attackTimer;
+    public float attackCooldown;
 
     public bool isSword;
+    public bool canAttack;
+
+    //Sound Effects
+    public AudioClip attackSound, slash, critSlash, chop, critChop;
+    private float rand;
+
 
     private void Start()
     {
- 
+
+        canAttack = true;
         critDamage = baseDamage * critMod;
-        attackTime = 1f / attackSpeed;
-        attackTimer = attackTime;
 
     }
 
 
     private void Update()
     {
-        
-        if(Input.GetMouseButtonDown(0))
+
+        if (Input.GetMouseButtonDown(0))
         {
-            if (isSword)
+            //sword + axe swing code
+
+            attackCooldown = 1;
+
+            if (canAttack && isSword)
+            {
                 SwordSwing();
-            else
+            }
+            else if (canAttack && !isSword)
+            {
                 AxeSwing();
+            }
         }
         else if (Input.GetMouseButtonDown(1))
         {
-            if (isSword)
+            //sword + axe chop code
+
+            attackCooldown = 2;
+
+            if (canAttack && isSword)
+            {
                 SwordChop();
-            else
+            }
+            else if (canAttack && !isSword)
+            {
                 AxeChop();
+            }
         }
 
 
@@ -49,26 +72,71 @@ public class WeaponStats : MonoBehaviour
 
     public void SwordSwing()
     {
-        //sword swing code
+        canAttack = false;
+        
+        Animator swordSwing = Weapon.GetComponent<Animator>();
+        swordSwing.SetTrigger("Sword Swing 1");
+
+        StartCoroutine(AttackReset());
     }
 
     public void SwordChop()
     {
-        //sword chop code
+        canAttack = false;
+
+        Animator swordSwing = Weapon.GetComponent<Animator>();
+        swordSwing.SetTrigger("Sword Chop 1");
+
+        StartCoroutine(AttackReset());
     }
 
     public void AxeSwing()
     {
-        //axe swing code
+        canAttack = false;
+
+        CriticalHit();
+
+        Animator axeSwing = Weapon.GetComponent<Animator>();
+        axeSwing.SetTrigger("Axe Swing 1");
+        
+
+        StartCoroutine(AttackReset());
     }
 
     public void AxeChop()
     {
         //axe chop code
+        canAttack = false;
+
+        CriticalHit();
+
+        Animator axeSwing = Weapon.GetComponent<Animator>();
+        axeSwing.SetTrigger("Axe Chop 1");
+
+
+        StartCoroutine(AttackReset());
     }
 
 
+    IEnumerator AttackReset()
+    {
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true;
+    }
 
-
+    public void CriticalHit()
+    {
+        rand = Random.Range(0f, 1f);
+        if (rand < critChance)
+        {
+            damageValue = baseDamage;
+            attackSound = slash;
+        }
+        else
+        {
+            damageValue = critDamage;
+            attackSound = critSlash;
+        }
+    }
 
 }
