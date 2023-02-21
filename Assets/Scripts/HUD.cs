@@ -92,7 +92,10 @@ public class HUD : MonoBehaviour
         PlayerHealth -= dmg;
         if (PlayerHealth <= 0)
         {
-             //death mechanic go here
+            //death mechanic go here
+            Time.timeScale = 0;
+            Respawn.Instance.PlayerRespawn();
+
         }
     }
 }
