@@ -1886,7 +1886,7 @@ GameObject:
   - component: {fileID: 5714359946268140534}
   - component: {fileID: 5714359946268140535}
   m_Layer: 9
-  m_Name: PlayerEmptyV6.1
+  m_Name: PlayerEmptyV6.1.0
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1940,6 +1940,9 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 1024
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 4096
   capsule: {fileID: 7129378671843206447}
 --- !u!54 &5714359946268140533
 Rigidbody:
@@ -2820,13 +2823,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359944769026931}
-  baseDamage: 0
+  baseDamage: 80
   damageValue: 0
   durability: 0
   attackSpeed: 0
   attackRange: 0
-  critMod: 0
-  critChance: 0
+  critMod: 1.6
+  critChance: 0.15
   critDamage: 0
   attackCooldown: 1
   isSword: 0
@@ -2951,13 +2954,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359944790920673}
-  baseDamage: 0
+  baseDamage: 80
   damageValue: 0
   durability: 0
   attackSpeed: 0
   attackRange: 0
-  critMod: 0
-  critChance: 0
+  critMod: 1.6
+  critChance: 0.15
   critDamage: 0
   attackCooldown: 1
   isSword: 1
@@ -3082,13 +3085,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359945004358814}
-  baseDamage: 0
+  baseDamage: 80
   damageValue: 0
   durability: 0
   attackSpeed: 0
   attackRange: 0
-  critMod: 0
-  critChance: 0
+  critMod: 1.6
+  critChance: 0.15
   critDamage: 0
   attackCooldown: 1
   isSword: 1
@@ -3117,7 +3120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7024471192796463452
 Transform:
   m_ObjectHideFlags: 0
@@ -3126,7 +3129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5714359945154423498}
   m_LocalRotation: {x: -0.4304592, y: -0.5609856, z: -0.4304592, w: 0.5609857}
-  m_LocalPosition: {x: -0.2977028, y: 2, z: 0.2545929}
+  m_LocalPosition: {x: -0.3, y: 2, z: 0.25}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children: []
   m_Father: {fileID: 4733736747725167172}
@@ -3213,13 +3216,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359945154423498}
-  baseDamage: 0
+  baseDamage: 80
   damageValue: 0
   durability: 0
   attackSpeed: 0
   attackRange: 0
-  critMod: 0
-  critChance: 0
+  critMod: 1.6
+  critChance: 0.15
   critDamage: 0
   attackCooldown: 1
   isSword: 0
@@ -3344,13 +3347,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359945204546933}
-  baseDamage: 0
+  baseDamage: 80
   damageValue: 0
   durability: 0
   attackSpeed: 0
   attackRange: 0
-  critMod: 0
-  critChance: 0
+  critMod: 1.6
+  critChance: 0.15
   critDamage: 0
   attackCooldown: 1
   isSword: 0
@@ -3379,7 +3382,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &659909943802569245
 Transform:
   m_ObjectHideFlags: 0
@@ -3388,7 +3391,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5714359945276046634}
   m_LocalRotation: {x: -0.4304592, y: -0.5609856, z: -0.4304592, w: 0.5609857}
-  m_LocalPosition: {x: -0.2977028, y: 2, z: 0.2545929}
+  m_LocalPosition: {x: -0.3, y: 2, z: 0.25}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children: []
   m_Father: {fileID: 4733736747725167172}
@@ -3475,13 +3478,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359945276046634}
-  baseDamage: 0
+  baseDamage: 80
   damageValue: 0
   durability: 0
   attackSpeed: 0
   attackRange: 0
-  critMod: 0
-  critChance: 0
+  critMod: 1.6
+  critChance: 0.15
   critDamage: 0
   attackCooldown: 1
   isSword: 0
@@ -3606,13 +3609,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359945316420870}
-  baseDamage: 0
+  baseDamage: 80
   damageValue: 0
   durability: 0
   attackSpeed: 0
   attackRange: 0
-  critMod: 0
-  critChance: 0
+  critMod: 1.6
+  critChance: 0.15
   critDamage: 0
   attackCooldown: 1
   isSword: 1
@@ -3737,13 +3740,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359945367839338}
-  baseDamage: 0
+  baseDamage: 80
   damageValue: 0
   durability: 0
   attackSpeed: 0
   attackRange: 0
-  critMod: 0
-  critChance: 0
+  critMod: 1.6
+  critChance: 0.15
   critDamage: 0
   attackCooldown: 1
   isSword: 0
@@ -3868,13 +3871,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359945540355357}
-  baseDamage: 0
+  baseDamage: 80
   damageValue: 0
   durability: 0
   attackSpeed: 0
   attackRange: 0
-  critMod: 0
-  critChance: 0
+  critMod: 1.6
+  critChance: 0.15
   critDamage: 0
   attackCooldown: 1
   isSword: 1
@@ -3903,7 +3906,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &169416101073006005
 Transform:
   m_ObjectHideFlags: 0
@@ -3999,13 +4002,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359945645859009}
-  baseDamage: 0
+  baseDamage: 80
   damageValue: 0
   durability: 0
   attackSpeed: 0
   attackRange: 0
-  critMod: 0
-  critChance: 0
+  critMod: 1.6
+  critChance: 0.15
   critDamage: 0
   attackCooldown: 1
   isSword: 0
@@ -4130,13 +4133,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359946832909184}
-  baseDamage: 0
+  baseDamage: 80
   damageValue: 0
   durability: 0
   attackSpeed: 0
   attackRange: 0
-  critMod: 0
-  critChance: 0
+  critMod: 1.6
+  critChance: 0.15
   critDamage: 0
   attackCooldown: 1
   isSword: 1
@@ -4165,7 +4168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1573023439322748365
 Transform:
   m_ObjectHideFlags: 0
@@ -4261,13 +4264,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359946848909476}
-  baseDamage: 0
+  baseDamage: 80
   damageValue: 0
   durability: 0
   attackSpeed: 0
   attackRange: 0
-  critMod: 0
-  critChance: 0
+  critMod: 1.6
+  critChance: 0.15
   critDamage: 0
   attackCooldown: 1
   isSword: 1

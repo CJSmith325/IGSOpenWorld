@@ -73,9 +73,13 @@ public class WeaponStats : MonoBehaviour
     public void SwordSwing()
     {
         canAttack = false;
-        
+
+        CriticalHit();
+
         Animator swordSwing = Weapon.GetComponent<Animator>();
         swordSwing.SetTrigger("Sword Swing 1");
+
+        PlayerMovement.Instance.HitMarker(damageValue);
 
         StartCoroutine(AttackReset());
     }
@@ -84,8 +88,12 @@ public class WeaponStats : MonoBehaviour
     {
         canAttack = false;
 
+        CriticalHit();
+
         Animator swordSwing = Weapon.GetComponent<Animator>();
         swordSwing.SetTrigger("Sword Chop 1");
+
+        PlayerMovement.Instance.HitMarker(damageValue);
 
         StartCoroutine(AttackReset());
     }
@@ -98,7 +106,8 @@ public class WeaponStats : MonoBehaviour
 
         Animator axeSwing = Weapon.GetComponent<Animator>();
         axeSwing.SetTrigger("Axe Swing 1");
-        
+
+        PlayerMovement.Instance.HitMarker(damageValue);
 
         StartCoroutine(AttackReset());
     }
@@ -113,6 +122,7 @@ public class WeaponStats : MonoBehaviour
         Animator axeSwing = Weapon.GetComponent<Animator>();
         axeSwing.SetTrigger("Axe Chop 1");
 
+        PlayerMovement.Instance.HitMarker(damageValue);
 
         StartCoroutine(AttackReset());
     }
@@ -124,16 +134,18 @@ public class WeaponStats : MonoBehaviour
         canAttack = true;
     }
 
+   
     public void CriticalHit()
     {
         rand = Random.Range(0f, 1f);
-        if (rand < critChance)
+        if (rand > critChance)
         {
             damageValue = baseDamage;
             attackSound = slash;
         }
         else
         {
+            Debug.Log("CRIT!!");
             damageValue = critDamage;
             attackSound = critSlash;
         }

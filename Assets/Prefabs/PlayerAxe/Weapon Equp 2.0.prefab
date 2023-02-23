@@ -1,245 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!95 &7124653868509170113
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2997125415812215988}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7807a03c751cffe4280c9192da3443fa, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7124653868509170118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2997125415812215988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d07a4548d47775c41a4daba22eaea481, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Weapon: {fileID: 2997125415812215988}
-  baseDamage: 0
-  damageValue: 0
-  durability: 0
-  attackSpeed: 0
-  attackRange: 0
-  critMod: 0
-  critChance: 0
-  critDamage: 0
-  attackCooldown: 1
-  isSword: 1
-  canAttack: 0
-  attackSound: {fileID: 0}
-  slash: {fileID: 0}
-  critSlash: {fileID: 0}
-  chop: {fileID: 0}
-  critChop: {fileID: 0}
---- !u!95 &7124653868591651144
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8295178834674633279}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c2abd9fe063b94d4f9b7247cdb504657, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7124653868591651145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8295178834674633279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d07a4548d47775c41a4daba22eaea481, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Weapon: {fileID: 8295178834674633279}
-  baseDamage: 0
-  damageValue: 0
-  durability: 0
-  attackSpeed: 0
-  attackRange: 0
-  critMod: 0
-  critChance: 0
-  critDamage: 0
-  attackCooldown: 1
-  isSword: 0
-  canAttack: 0
-  attackSound: {fileID: 0}
-  slash: {fileID: 0}
-  critSlash: {fileID: 0}
-  chop: {fileID: 0}
-  critChop: {fileID: 0}
---- !u!95 &7124653868955172887
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5412047623825927770}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c2abd9fe063b94d4f9b7247cdb504657, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7124653868955172884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5412047623825927770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d07a4548d47775c41a4daba22eaea481, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Weapon: {fileID: 5412047623825927770}
-  baseDamage: 0
-  damageValue: 0
-  durability: 0
-  attackSpeed: 0
-  attackRange: 0
-  critMod: 0
-  critChance: 0
-  critDamage: 0
-  attackCooldown: 1
-  isSword: 0
-  canAttack: 0
-  attackSound: {fileID: 0}
-  slash: {fileID: 0}
-  critSlash: {fileID: 0}
-  chop: {fileID: 0}
-  critChop: {fileID: 0}
---- !u!95 &7124653868960740235
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288149358877301201}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c2abd9fe063b94d4f9b7247cdb504657, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7124653868960740232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288149358877301201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d07a4548d47775c41a4daba22eaea481, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Weapon: {fileID: 1288149358877301201}
-  baseDamage: 0
-  damageValue: 0
-  durability: 0
-  attackSpeed: 0
-  attackRange: 0
-  critMod: 0
-  critChance: 0
-  critDamage: 0
-  attackCooldown: 1
-  isSword: 0
-  canAttack: 0
-  attackSound: {fileID: 0}
-  slash: {fileID: 0}
-  critSlash: {fileID: 0}
-  chop: {fileID: 0}
-  critChop: {fileID: 0}
---- !u!95 &7124653869260819637
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2296836180175718476}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7807a03c751cffe4280c9192da3443fa, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7124653869260819530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2296836180175718476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d07a4548d47775c41a4daba22eaea481, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Weapon: {fileID: 2296836180175718476}
-  baseDamage: 0
-  damageValue: 0
-  durability: 0
-  attackSpeed: 0
-  attackRange: 0
-  critMod: 0
-  critChance: 0
-  critDamage: 0
-  attackCooldown: 1
-  isSword: 1
-  canAttack: 0
-  attackSound: {fileID: 0}
-  slash: {fileID: 0}
-  critSlash: {fileID: 0}
-  chop: {fileID: 0}
-  critChop: {fileID: 0}
 --- !u!95 &7124653869312237434
 Animator:
   serializedVersion: 3
@@ -272,54 +32,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 386150516300378920}
-  baseDamage: 0
-  damageValue: 0
-  durability: 0
-  attackSpeed: 0
-  attackRange: 0
-  critMod: 0
-  critChance: 0
-  critDamage: 0
-  attackCooldown: 1
-  isSword: 1
-  canAttack: 0
-  attackSound: {fileID: 0}
-  slash: {fileID: 0}
-  critSlash: {fileID: 0}
-  chop: {fileID: 0}
-  critChop: {fileID: 0}
---- !u!95 &7124653869460338743
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7694570775695455900}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7807a03c751cffe4280c9192da3443fa, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7124653869460338740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7694570775695455900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d07a4548d47775c41a4daba22eaea481, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Weapon: {fileID: 7694570775695455900}
   baseDamage: 0
   damageValue: 0
   durability: 0
@@ -384,14 +96,14 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
---- !u!95 &7124653870229811184
+--- !u!95 &7124653868960740235
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1587345552432192248}
+  m_GameObject: {fileID: 1288149358877301201}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: c2abd9fe063b94d4f9b7247cdb504657, type: 2}
@@ -403,19 +115,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7124653870229811185
+--- !u!114 &7124653868960740232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1587345552432192248}
+  m_GameObject: {fileID: 1288149358877301201}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d07a4548d47775c41a4daba22eaea481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weapon: {fileID: 1587345552432192248}
+  Weapon: {fileID: 1288149358877301201}
   baseDamage: 0
   damageValue: 0
   durability: 0
@@ -426,54 +138,6 @@ MonoBehaviour:
   critDamage: 0
   attackCooldown: 1
   isSword: 0
-  canAttack: 0
-  attackSound: {fileID: 0}
-  slash: {fileID: 0}
-  critSlash: {fileID: 0}
-  chop: {fileID: 0}
-  critChop: {fileID: 0}
---- !u!95 &7124653870302275830
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2630649848588440641}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7807a03c751cffe4280c9192da3443fa, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7124653870302275831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2630649848588440641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d07a4548d47775c41a4daba22eaea481, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Weapon: {fileID: 2630649848588440641}
-  baseDamage: 0
-  damageValue: 0
-  durability: 0
-  attackSpeed: 0
-  attackRange: 0
-  critMod: 0
-  critChance: 0
-  critDamage: 0
-  attackCooldown: 1
-  isSword: 1
   canAttack: 0
   attackSound: {fileID: 0}
   slash: {fileID: 0}
@@ -576,6 +240,259 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
+--- !u!95 &7124653870229811184
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587345552432192248}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c2abd9fe063b94d4f9b7247cdb504657, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7124653870229811185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587345552432192248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d07a4548d47775c41a4daba22eaea481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapon: {fileID: 1587345552432192248}
+  baseDamage: 0
+  damageValue: 0
+  durability: 0
+  attackSpeed: 0
+  attackRange: 0
+  critMod: 0
+  critChance: 0
+  critDamage: 0
+  attackCooldown: 1
+  isSword: 0
+  canAttack: 0
+  attackSound: {fileID: 0}
+  slash: {fileID: 0}
+  critSlash: {fileID: 0}
+  chop: {fileID: 0}
+  critChop: {fileID: 0}
+--- !u!95 &7124653869260819637
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2296836180175718476}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7807a03c751cffe4280c9192da3443fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7124653869260819530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2296836180175718476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d07a4548d47775c41a4daba22eaea481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapon: {fileID: 2296836180175718476}
+  baseDamage: 0
+  damageValue: 0
+  durability: 0
+  attackSpeed: 0
+  attackRange: 0
+  critMod: 0
+  critChance: 0
+  critDamage: 0
+  attackCooldown: 1
+  isSword: 1
+  canAttack: 0
+  attackSound: {fileID: 0}
+  slash: {fileID: 0}
+  critSlash: {fileID: 0}
+  chop: {fileID: 0}
+  critChop: {fileID: 0}
+--- !u!95 &7124653870302275830
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2630649848588440641}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7807a03c751cffe4280c9192da3443fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7124653870302275831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2630649848588440641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d07a4548d47775c41a4daba22eaea481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapon: {fileID: 2630649848588440641}
+  baseDamage: 0
+  damageValue: 0
+  durability: 0
+  attackSpeed: 0
+  attackRange: 0
+  critMod: 0
+  critChance: 0
+  critDamage: 0
+  attackCooldown: 1
+  isSword: 1
+  canAttack: 0
+  attackSound: {fileID: 0}
+  slash: {fileID: 0}
+  critSlash: {fileID: 0}
+  chop: {fileID: 0}
+  critChop: {fileID: 0}
+--- !u!95 &7124653868509170113
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2997125415812215988}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7807a03c751cffe4280c9192da3443fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7124653868509170118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2997125415812215988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d07a4548d47775c41a4daba22eaea481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapon: {fileID: 2997125415812215988}
+  baseDamage: 0
+  damageValue: 0
+  durability: 0
+  attackSpeed: 0
+  attackRange: 0
+  critMod: 0
+  critChance: 0
+  critDamage: 0
+  attackCooldown: 1
+  isSword: 1
+  canAttack: 0
+  attackSound: {fileID: 0}
+  slash: {fileID: 0}
+  critSlash: {fileID: 0}
+  chop: {fileID: 0}
+  critChop: {fileID: 0}
+--- !u!95 &7124653868955172887
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5412047623825927770}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c2abd9fe063b94d4f9b7247cdb504657, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7124653868955172884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5412047623825927770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d07a4548d47775c41a4daba22eaea481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapon: {fileID: 5412047623825927770}
+  baseDamage: 0
+  damageValue: 0
+  durability: 0
+  attackSpeed: 0
+  attackRange: 0
+  critMod: 0
+  critChance: 0
+  critDamage: 0
+  attackCooldown: 1
+  isSword: 0
+  canAttack: 0
+  attackSound: {fileID: 0}
+  slash: {fileID: 0}
+  critSlash: {fileID: 0}
+  chop: {fileID: 0}
+  critChop: {fileID: 0}
+--- !u!65 &1182399534273051489
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5412047623825927770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.2, z: 0.6}
+  m_Center: {x: 0, y: -0.1, z: 0.1}
 --- !u!1 &7225236147836351231
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +504,7 @@ GameObject:
   - component: {fileID: 8641756743356966939}
   - component: {fileID: 4011025147357725367}
   m_Layer: 0
-  m_Name: Weapon Equp 2
+  m_Name: Weapon Equp 2.0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -647,6 +564,102 @@ MonoBehaviour:
   bigSword1: {fileID: 2997125415812215988}
   bigSword2: {fileID: 2630649848588440641}
   bigSword3: {fileID: 7694570775695455900}
+--- !u!95 &7124653869460338743
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7694570775695455900}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7807a03c751cffe4280c9192da3443fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7124653869460338740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7694570775695455900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d07a4548d47775c41a4daba22eaea481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapon: {fileID: 7694570775695455900}
+  baseDamage: 0
+  damageValue: 0
+  durability: 0
+  attackSpeed: 0
+  attackRange: 0
+  critMod: 0
+  critChance: 0
+  critDamage: 0
+  attackCooldown: 1
+  isSword: 1
+  canAttack: 0
+  attackSound: {fileID: 0}
+  slash: {fileID: 0}
+  critSlash: {fileID: 0}
+  chop: {fileID: 0}
+  critChop: {fileID: 0}
+--- !u!95 &7124653868591651144
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8295178834674633279}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c2abd9fe063b94d4f9b7247cdb504657, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7124653868591651145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8295178834674633279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d07a4548d47775c41a4daba22eaea481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapon: {fileID: 8295178834674633279}
+  baseDamage: 0
+  damageValue: 0
+  durability: 0
+  attackSpeed: 0
+  attackRange: 0
+  critMod: 0
+  critChance: 0
+  critDamage: 0
+  attackCooldown: 1
+  isSword: 0
+  canAttack: 0
+  attackSound: {fileID: 0}
+  slash: {fileID: 0}
+  critSlash: {fileID: 0}
+  chop: {fileID: 0}
+  critChop: {fileID: 0}
 --- !u!1001 &88941838719927442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -660,7 +673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1305568954176866716, guid: 59d21c8c65dbf3c40961eec804992414, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1825506680692921126, guid: 59d21c8c65dbf3c40961eec804992414, type: 3}
       propertyPath: m_RootOrder
@@ -775,7 +788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 979578867108930590, guid: a75c4703c6c87ac479d39ed1e0fdedbf, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a75c4703c6c87ac479d39ed1e0fdedbf, type: 3}
@@ -802,7 +815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4896477776508189761, guid: f73a752176f733f4c8de084de86ffc1a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5239964781517809403, guid: f73a752176f733f4c8de084de86ffc1a, type: 3}
       propertyPath: m_RootOrder
@@ -850,14 +863,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f73a752176f733f4c8de084de86ffc1a, type: 3}
---- !u!1 &7694570775695455900 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4896477776508189761, guid: f73a752176f733f4c8de084de86ffc1a, type: 3}
-  m_PrefabInstance: {fileID: 2971060472124574429}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7026543366831451174 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5239964781517809403, guid: f73a752176f733f4c8de084de86ffc1a, type: 3}
+  m_PrefabInstance: {fileID: 2971060472124574429}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7694570775695455900 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4896477776508189761, guid: f73a752176f733f4c8de084de86ffc1a, type: 3}
   m_PrefabInstance: {fileID: 2971060472124574429}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3053590841391125028
@@ -917,7 +930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4352705879813212380, guid: 8f52eed731de4c445b8a7a8cc7662bea, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f52eed731de4c445b8a7a8cc7662bea, type: 3}
@@ -944,7 +957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1400098655828305759, guid: 0910ef3d54810c046a45d8b9caad102b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1740068288778845669, guid: 0910ef3d54810c046a45d8b9caad102b, type: 3}
       propertyPath: m_RootOrder
@@ -1013,6 +1026,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Base Axe
       objectReference: {fileID: 0}
+    - target: {fileID: 8609921102789543187, guid: c06a361337f62cd4f8ed65327958968a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8950698705239498665, guid: c06a361337f62cd4f8ed65327958968a, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1059,14 +1076,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c06a361337f62cd4f8ed65327958968a, type: 3}
---- !u!1 &5412047623825927770 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8609921102789543187, guid: c06a361337f62cd4f8ed65327958968a, type: 3}
-  m_PrefabInstance: {fileID: 4352694970399664969}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4634384401551357152 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8950698705239498665, guid: c06a361337f62cd4f8ed65327958968a, type: 3}
+  m_PrefabInstance: {fileID: 4352694970399664969}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5412047623825927770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8609921102789543187, guid: c06a361337f62cd4f8ed65327958968a, type: 3}
   m_PrefabInstance: {fileID: 4352694970399664969}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5178394295775923669
@@ -1126,7 +1143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6358337732305061273, guid: f7bc60b1b8d6bb24ea7c9f6e8908c23e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7bc60b1b8d6bb24ea7c9f6e8908c23e, type: 3}
@@ -1153,7 +1170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5007148813240695282, guid: 80871f35fe34b124fb083ec71946d598, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5636017428741399368, guid: 80871f35fe34b124fb083ec71946d598, type: 3}
       propertyPath: m_RootOrder
@@ -1201,14 +1218,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80871f35fe34b124fb083ec71946d598, type: 3}
---- !u!1 &1462773578894535272 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5007148813240695282, guid: 80871f35fe34b124fb083ec71946d598, type: 3}
-  m_PrefabInstance: {fileID: 5850219350596719514}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2235756279004246226 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5636017428741399368, guid: 80871f35fe34b124fb083ec71946d598, type: 3}
+  m_PrefabInstance: {fileID: 5850219350596719514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1462773578894535272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5007148813240695282, guid: 80871f35fe34b124fb083ec71946d598, type: 3}
   m_PrefabInstance: {fileID: 5850219350596719514}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6869682331434676580
@@ -1268,7 +1285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6489091641743901260, guid: 3c2d3eb1dd8b2034d928958f64617753, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c2d3eb1dd8b2034d928958f64617753, type: 3}
@@ -1339,7 +1356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8834985015698162010, guid: c796d507aafdfde4f8ecf03bd7f58b78, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c796d507aafdfde4f8ecf03bd7f58b78, type: 3}
@@ -1410,7 +1427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2043085952661406856, guid: b88a13a85557caa4dbe19a3ef06cb0ef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b88a13a85557caa4dbe19a3ef06cb0ef, type: 3}
@@ -1481,7 +1498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8904455807572819958, guid: eae53c8d8765ccc4faff9ba48c0b5965, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eae53c8d8765ccc4faff9ba48c0b5965, type: 3}

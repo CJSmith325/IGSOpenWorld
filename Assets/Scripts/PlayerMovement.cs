@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    public static PlayerMovement Instance;
+
     public CharacterController controller;
 
     //move speeds and forces
@@ -17,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Vector Calculus
     Vector3 velocity;
+    Vector3 move;
 
     //touching grass
     public bool isGrounded;
@@ -27,12 +31,15 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundMask;
 
+    //hit detection
+    public LayerMask enemyMask;
 
     //player morphs
     public Transform capsule;
 
     private void Start()
     {
+        Instance = this;
         currentY = startY;
     }
 
@@ -49,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * x + transform.forward * z;
+        move = transform.right * x + transform.forward * z;
 
         if (Input.GetKey(KeyCode.LeftShift) && isGrounded)         //Sprint Code 
         {
@@ -93,4 +100,26 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
     }
+
+    public void HitMarker(float damage)
+    {
+
+        Vector3 spherePos = this.transform.position + Vector3.Normalize(move);
+
+        Collider[] hit = Physics.OverlapSphere(spherePos, 3f, enemyMask);
+
+        //check each hit for a health script and do damage
+        foreach (Collider coll in hit)
+        {
+            if(coll.gameObject.GetComponent<EnemyHealth>() != null)
+            {
+                Debug.Log(coll.gameObject.tag);
+                coll.gameObject.GetComponent<EnemyHealth>().takeDamage(damage);
+            }
+        }
+
+
+    }
+
+
 }
