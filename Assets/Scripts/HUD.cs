@@ -54,6 +54,7 @@ public class HUD : MonoBehaviour
         {
             //death mechanics go here
         }
+        /*
         if (Weapon1OB.activeInHierarchy)
         {
             Weapon1.SetActive(true);
@@ -86,13 +87,17 @@ public class HUD : MonoBehaviour
         {
             Weapon4.SetActive(false);
         }
+        */
     }
     public void TakeDamage(int dmg)
     {
         PlayerHealth -= dmg;
         if (PlayerHealth <= 0)
         {
-             //death mechanic go here
+            //death mechanic go here
+            Time.timeScale = 0;
+            Respawn.Instance.PlayerRespawn();
+
         }
     }
 }

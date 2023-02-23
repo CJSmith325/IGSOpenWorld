@@ -32,10 +32,11 @@ public class Respawn : MonoBehaviour
         {
             PlayerRespawn();
         }
+        
 
     }
     //Respawn Function
-    void PlayerRespawn()
+    public void PlayerRespawn()
     {
 
         Debug.Log("SpawnPoint: " + SpawnPoint.transform.position);
