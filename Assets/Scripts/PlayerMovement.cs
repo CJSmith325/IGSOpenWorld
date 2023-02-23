@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
 
             currentY = Mathf.Lerp(currentY, crouchY, 10f * Time.deltaTime);
             capsule.transform.localScale = new Vector3(1.0f, currentY, 1.0f);
+
             if (z > 0 && slideTimer > 0)
             {
                 controller.Move(move * speed * slideMod * Time.deltaTime);
@@ -85,6 +86,8 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
+
+        controller.height = currentY * 2f;
 
         velocity.y += gravity * Time.deltaTime;
 
