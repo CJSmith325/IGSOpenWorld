@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     //touching grass
     public bool isGrounded;
+    public bool isSwimming;
     public float groundDistance = 1f;
     private float startY = 1f;
     private float crouchY = .5f;
@@ -55,6 +56,12 @@ public class PlayerMovement : MonoBehaviour
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+
+        if (isSwimming)
+        {
+            x /= 1.5f;
+            z /= 1.5f;
+        }
 
         move = transform.right * x + transform.forward * z;
 
@@ -89,15 +96,28 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Jump Code
-        if (Input.GetButton("Jump") && isGrounded)
+        if (Input.GetButton("Jump") && (isGrounded || isSwimming))
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            if (isSwimming && !isGrounded)
+            {
+                velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
+            }
+            else
+            {
+                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            }
         }
 
         controller.height = currentY * 2f;
 
-        velocity.y += gravity * Time.deltaTime;
-
+        if (isSwimming)
+        {
+            velocity.y += gravity * Time.deltaTime;
+        }
+        else
+        {
+            velocity.y += gravity * 0.5f * Time.deltaTime;
+        }
         controller.Move(velocity * Time.deltaTime);
     }
 
@@ -120,6 +140,18 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
-
-
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Water")
+        {
+            isSwimming = true;
+        }    
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Water")
+        {
+            isSwimming = false;
+        }
+    }
 }
