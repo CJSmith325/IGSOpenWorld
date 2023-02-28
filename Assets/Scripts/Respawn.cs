@@ -38,16 +38,13 @@ public class Respawn : MonoBehaviour
     //Respawn Function
     public void PlayerRespawn()
     {
-
         Debug.Log("SpawnPoint: " + SpawnPoint.transform.position);
-
         Debug.Log("TP");
         Player.transform.position = SpawnLocation; //Sets player Position to SpawnLocations saved position.
         HUD.Instance.PlayerHealth = HUD.Instance.PlayerMaxHealth;
         Debug.Log("PlayerHealth: " + HUD.Instance.PlayerHealth);
         Debug.Log("SpawnLocation: " + SpawnLocation + "\tplayerLocation: " + Player.transform.position);
         Time.timeScale = 1;
-
     }
 
     void SpawnPointSelection()
