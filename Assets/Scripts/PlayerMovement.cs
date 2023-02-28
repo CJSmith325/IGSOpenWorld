@@ -110,13 +110,13 @@ public class PlayerMovement : MonoBehaviour
 
         controller.height = currentY * 2f;
 
-        if (isSwimming)
+        if (!isSwimming)
         {
             velocity.y += gravity * Time.deltaTime;
         }
         else
         {
-            velocity.y += gravity * 0.5f * Time.deltaTime;
+            velocity.y += gravity * 0.15f * Time.deltaTime;
         }
         controller.Move(velocity * Time.deltaTime);
     }
