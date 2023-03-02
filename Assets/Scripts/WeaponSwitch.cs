@@ -18,6 +18,7 @@ public class WeaponSwitch : MonoBehaviour
     public Image weaponIcon;
     public Sprite[] weaponWheel = new Sprite[12];
 
+
     void Start()
     {
         totalWeapons = 12;

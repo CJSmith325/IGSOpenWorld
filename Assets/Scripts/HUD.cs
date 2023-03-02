@@ -30,22 +30,20 @@ public class HUD : MonoBehaviour
     {
         HealthText.text = (int)PlayerHealth + "/" + (int)PlayerMaxHealth;
         
-        regenTimer += Time.deltaTime;
-        if (regenTimer >= 1)
+        regenTimer -= Time.deltaTime;
+
+        if (regenTimer <= 0)
         {
             PlayerHealth += PlayerRegen;
             if (PlayerHealth > PlayerMaxHealth)
             {
                 PlayerHealth = PlayerMaxHealth;
+                regenTimer = 5f;
             }
-            regenTimer = 0;
         }
+
         fill = (PlayerHealth * 100 / PlayerMaxHealth);
         HealthImage.fillAmount = fill / 100;
-        if (PlayerHealth <= 0)
-        {
-            //death mechanics go here
-        }
 
         healthPct = (float)PlayerHealth / (float)PlayerMaxHealth;
 

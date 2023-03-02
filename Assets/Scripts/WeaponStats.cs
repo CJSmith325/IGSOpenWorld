@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponStats : MonoBehaviour
 {
@@ -23,12 +24,18 @@ public class WeaponStats : MonoBehaviour
     public AudioClip attackSound, slash, critSlash, chop, critChop;
     private float rand;
 
+    //Image Icons
+    public Transform damageIcon, speedIcon;
+    private float damageWidth, speedWidth;
 
     private void Start()
     {
 
         canAttack = true;
         critDamage = baseDamage * critMod;
+
+        damageWidth = 1f;
+        speedWidth = 1f;
 
     }
 
@@ -67,6 +74,14 @@ public class WeaponStats : MonoBehaviour
             }
         }
 
+        damageWidth = Mathf.Lerp(damageWidth, baseDamage*2, Time.deltaTime * 5f);
+        speedWidth = Mathf.Lerp(speedWidth, 100f/attackCooldown, Time.deltaTime * 5f);
+
+        damageIcon.localScale = new Vector3 (damageWidth, 1, 1);
+        damageIcon.transform.position = new Vector3((225f + damageWidth/2), 160f, 0f);
+
+        speedIcon.localScale = new Vector3(speedWidth, 1, 1);
+        speedIcon.transform.position = new Vector3((225f + speedWidth/2f), 90f, 0f);
 
     }
 
