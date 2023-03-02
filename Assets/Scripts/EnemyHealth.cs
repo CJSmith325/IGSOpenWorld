@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    private float health;
+    public float health;
     public float maxHealth;
 
     void Start()
@@ -18,7 +18,7 @@ public class EnemyHealth : MonoBehaviour
         
     }
 
-    public void takeDamage(float damage)
+    public void enemyTakeDamage(float damage)
     {
         health -= damage;
 
