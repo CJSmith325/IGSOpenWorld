@@ -53,6 +53,15 @@ public class Notes : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
+
+        if (Input.GetButton("Interact"))
+        {
+            noteUI.SetActive(false);
+            hud.SetActive(true);
+            inv.SetActive(true);
+            Time.timeScale = 1;
+            Cursor.visible = false;
+        }
     }
 
     public void ExitButton()
