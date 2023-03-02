@@ -20,8 +20,6 @@ public class HUD : MonoBehaviour
     public float fill;
     public float healthPct;
 
-    public GameObject GameOverCanvas;
-
     private void Start()
     {
         Instance = this;
@@ -32,23 +30,22 @@ public class HUD : MonoBehaviour
     {
         HealthText.text = PlayerHealth + "/" + PlayerMaxHealth;
         
-        regenTimer -= Time.deltaTime;
-
-        if (regenTimer <= 0f)
+        regenTimer += Time.deltaTime;
+        if (regenTimer >= 1)
         {
             PlayerHealth += PlayerRegen;
-
             if (PlayerHealth > PlayerMaxHealth)
             {
                 PlayerHealth = PlayerMaxHealth;
-                regenTimer = 10f;
-
             }
-
+            regenTimer = 0;
         }
-
         fill = (PlayerHealth * 100 / PlayerMaxHealth);
         HealthImage.fillAmount = fill / 100;
+        if (PlayerHealth <= 0)
+        {
+            //death mechanics go here
+        }
 
         healthPct = (float)PlayerHealth / (float)PlayerMaxHealth;
 
@@ -63,7 +60,6 @@ public class HUD : MonoBehaviour
         {
             //death mechanic go here
             Time.timeScale = 0;
-
             Respawn.Instance.PlayerRespawn();
 
         }
