@@ -13,6 +13,8 @@ public class Notes : MonoBehaviour
     //public AudioSource pickUpSound;
     public bool inReach;
 
+    public bool isOpen;
+
     void Start()
     {
         noteUI.SetActive(false);
@@ -21,6 +23,7 @@ public class Notes : MonoBehaviour
         pickUpText.SetActive(false);
         Time.timeScale = 1;
         inReach = false;
+        isOpen = false;
     }
 
     void OnTriggerEnter(Collider other)
@@ -43,33 +46,43 @@ public class Notes : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Interact") && inReach)
+        if (Input.GetButtonDown("Interact") && inReach && !isOpen)
         {
-            noteUI.SetActive(true);
-            //pickUpSound.Play();
-            hud.SetActive(false);
-            inv.SetActive(false);
-            Time.timeScale = 0;
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            OpenMap(); 
         }
-
-        if (Input.GetButton("Interact"))
+        else if (Input.GetButtonDown("Interact") && inReach && isOpen)
         {
-            noteUI.SetActive(false);
-            hud.SetActive(true);
-            inv.SetActive(true);
-            Time.timeScale = 1;
-            Cursor.visible = false;
+            CloseMap();
         }
     }
 
     public void ExitButton()
+    {
+        CloseMap();
+    }
+
+    public void OpenMap()
+    {
+        noteUI.SetActive(true);
+        //pickUpSound.Play();
+        hud.SetActive(false);
+        inv.SetActive(false);
+        Time.timeScale = 0;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        isOpen = true;
+
+    }
+
+
+    public void CloseMap()
     {
         noteUI.SetActive(false);
         hud.SetActive(true);
         inv.SetActive(true);
         Time.timeScale = 1;
         Cursor.visible = false;
+        isOpen = false;
+
     }
 }
