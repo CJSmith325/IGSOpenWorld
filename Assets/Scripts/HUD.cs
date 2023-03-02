@@ -8,25 +8,17 @@ public class HUD : MonoBehaviour
 
     public static HUD Instance;
 
-    public GameObject Weapon1;
-    public GameObject Weapon1OB;
-    public Image HealthImage;
     public Text HealthText;
-    public float regenTimer;
-    public float fill;
     public int PlayerRegen;
     public int PlayerHealth;
     public int PlayerMaxHealth;
 
-    public GameObject Weapon2;
-    public GameObject Weapon2OB;
+    public Image HealthImage;
+    public Image bloodEffect;
 
-    public GameObject Weapon3;
-    public GameObject Weapon3OB;
-
-    public GameObject Weapon4;
-    public GameObject Weapon4OB;
-
+    public float regenTimer;
+    public float fill;
+    public float healthPct;
 
     private void Start()
     {
@@ -54,40 +46,12 @@ public class HUD : MonoBehaviour
         {
             //death mechanics go here
         }
-        /*
-        if (Weapon1OB.activeInHierarchy)
-        {
-            Weapon1.SetActive(true);
-        }
-        else
-        {
-            Weapon1.SetActive(false);
-        }
-        if (Weapon2OB.activeInHierarchy)
-        {
-            Weapon2.SetActive(true);
-        }
-        else
-        {
-            Weapon2.SetActive(false);
-        }
-        if (Weapon3OB.activeInHierarchy)
-        {
-            Weapon3.SetActive(true);
-        }
-        else
-        {
-            Weapon3.SetActive(false);
-        }
-        if (Weapon4OB.activeInHierarchy)
-        {
-            Weapon4.SetActive(true);
-        }
-        else
-        {
-            Weapon4.SetActive(false);
-        }
-        */
+
+        healthPct = (float)PlayerHealth / (float)PlayerMaxHealth;
+
+        //change blood overlay to have opacity cooresponding to the remainging health
+        bloodEffect.color = new Color(1f, 1f, 1f, 1f - healthPct);
+
     }
     public void TakeDamage(int dmg)
     {

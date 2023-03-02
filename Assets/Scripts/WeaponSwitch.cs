@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponSwitch : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class WeaponSwitch : MonoBehaviour
     public GameObject[] weapons;
     public GameObject axe1, axe2, axe3, dblAxe1, dblAxe2, dblAxe3, sword1, sword2, sword3, bigSword1, bigSword2, bigSword3;
 
+
+    public Image weaponIcon;
+    public Sprite[] weaponWheel = new Sprite[12];
 
     void Start()
     {
@@ -78,6 +82,7 @@ public class WeaponSwitch : MonoBehaviour
     public void SwitchWeapons()
     {
         activeWeapon = (activeWeapon + 1) % totalWeapons;
+        weaponIcon.sprite = weaponWheel[activeWeapon];
 
         for (int i = 0; i < totalWeapons; i++)
         {
@@ -101,6 +106,7 @@ public class WeaponSwitch : MonoBehaviour
     public void SwitchWeapons(int num)
     {
         activeWeapon = num;
+        weaponIcon.sprite = weaponWheel[num];
 
         for (int i = 0; i < totalWeapons; i++)
         {
