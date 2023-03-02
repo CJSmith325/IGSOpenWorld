@@ -9,9 +9,9 @@ public class HUD : MonoBehaviour
     public static HUD Instance;
 
     public Text HealthText;
-    public int PlayerRegen;
-    public int PlayerHealth;
-    public int PlayerMaxHealth;
+    public float PlayerRegen;
+    public float PlayerHealth;
+    public float PlayerMaxHealth;
 
     public Image HealthImage;
     public Image bloodEffect;
@@ -30,7 +30,7 @@ public class HUD : MonoBehaviour
 
     void Update()
     {
-        HealthText.text = PlayerHealth + "/" + PlayerMaxHealth;
+        HealthText.text = (int)PlayerHealth + "/" + (int)PlayerMaxHealth;
         
         regenTimer -= Time.deltaTime;
 

@@ -8,9 +8,11 @@ public class EnemyHealth : MonoBehaviour
     public float health;
     public float maxHealth;
 
+
     void Start()
     {
         health = maxHealth;
+
     }
 
     void Update()
@@ -26,6 +28,14 @@ public class EnemyHealth : MonoBehaviour
         {
             Debug.Log("Death Damage: " + damage);
             Destroy(this.gameObject);
+
+            /*
+            Rigidbody rb = this.gameObject.AddComponent<Rigidbody>();
+            player = playerObj.transform;
+            launchAngle = this.gameObject.transform.position - player.position;
+            rb.AddForce(launchAngle * explosionForce);  //launch the ragdoll
+            */
+
         }
     }
 

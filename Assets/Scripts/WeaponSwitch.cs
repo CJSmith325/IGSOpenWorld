@@ -24,6 +24,8 @@ public class WeaponSwitch : MonoBehaviour
         activeWeapon = 0;
 
         weapons = new GameObject[totalWeapons];
+        weaponIcon.sprite = weaponWheel[activeWeapon];
+
 
         weapons[0] = axe1;
         weapons[1] = axe2;
