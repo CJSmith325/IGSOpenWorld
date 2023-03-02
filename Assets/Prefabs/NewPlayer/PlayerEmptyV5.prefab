@@ -3019,7 +3019,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db5175670278d9a488a6c4ff030d8627, type: 2}
+  - {fileID: 2100000, guid: b4ec8a2d7af72ae4bbd7b2e6256a50cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3074,12 +3074,16 @@ MonoBehaviour:
   jumpHeight: 1
   slideMod: 2
   isGrounded: 0
+  isSwimming: 0
   groundDistance: 0.4
   currentY: 0
   groundCheck: {fileID: 7426419085853773477}
   groundMask:
     serializedVersion: 2
     m_Bits: 1024
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 0
   capsule: {fileID: 7426419085706157918}
 --- !u!114 &7426419085706157914
 MonoBehaviour:
@@ -3093,21 +3097,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829e8414b6e368540a00be889b98061a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weapon1: {fileID: 0}
-  Weapon1OB: {fileID: 0}
-  HealthImage: {fileID: 7426419085865623909}
   HealthText: {fileID: 1274997933832330379}
-  regenTimer: 0
-  fill: 0
   PlayerRegen: 1
   PlayerHealth: 100
   PlayerMaxHealth: 100
-  Weapon2: {fileID: 0}
-  Weapon2OB: {fileID: 0}
-  Weapon3: {fileID: 0}
-  Weapon3OB: {fileID: 0}
-  Weapon4: {fileID: 0}
-  Weapon4OB: {fileID: 0}
+  HealthImage: {fileID: 7426419085865623909}
+  bloodEffect: {fileID: 0}
+  regenTimer: 0
+  fill: 0
+  healthPct: 0
 --- !u!114 &7426419085706157913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3136,6 +3134,20 @@ MonoBehaviour:
   bigSword1: {fileID: 0}
   bigSword2: {fileID: 0}
   bigSword3: {fileID: 0}
+  weaponIcon: {fileID: 0}
+  weaponWheel:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!136 &7426419085706157912
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3311,7 +3323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7426419085845274830
 Transform:
   m_ObjectHideFlags: 0
