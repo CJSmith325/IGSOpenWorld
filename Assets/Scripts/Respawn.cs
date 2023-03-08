@@ -42,6 +42,7 @@ public class Respawn : MonoBehaviour
         Debug.Log("TP");
         Player.transform.position = SpawnLocation; //Sets player Position to SpawnLocations saved position.
         HUD.Instance.PlayerHealth = HUD.Instance.PlayerMaxHealth;
+        HUD.Instance.GameOverCanvas.SetActive(false);
         Debug.Log("PlayerHealth: " + HUD.Instance.PlayerHealth);
         Debug.Log("SpawnLocation: " + SpawnLocation + "\tplayerLocation: " + Player.transform.position);
         Time.timeScale = 1;
