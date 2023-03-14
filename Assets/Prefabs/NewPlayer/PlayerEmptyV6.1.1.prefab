@@ -545,14 +545,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4772851540750600380}
-  m_RootOrder: 5
+  m_Father: {fileID: 4511803376574182979}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 225, y: 160}
-  m_SizeDelta: {x: 1, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 175, y: 110}
+  m_SizeDelta: {x: 150, y: 50}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &2124257262495668271
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -581,11 +581,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 087df1c6a863e7f4094b47d64b746fff, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -1391,8 +1391,6 @@ RectTransform:
   - {fileID: 7269321886802906592}
   - {fileID: 6016134248001186636}
   - {fileID: 4511803376574182979}
-  - {fileID: 1100291844447224787}
-  - {fileID: 3266788268881906710}
   m_Father: {fileID: 8547838710188381391}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2502,7 +2500,7 @@ MonoBehaviour:
   baseDamage: 90
   damageValue: 0
   durability: 0
-  attackSpeed: 0
+  attackSpeed: 0.85
   attackRange: 0
   critMod: 1.6
   critChance: 0.15
@@ -2515,8 +2513,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
-  damageIcon: {fileID: 1100291844447224787}
-  speedIcon: {fileID: 3266788268881906710}
+  damageIcon: {fileID: 1285692702692994177}
+  speedIcon: {fileID: 7619168318941165098}
 --- !u!1 &4571511407769244190
 GameObject:
   m_ObjectHideFlags: 0
@@ -2635,7 +2633,7 @@ MonoBehaviour:
   baseDamage: 80
   damageValue: 0
   durability: 0
-  attackSpeed: 0
+  attackSpeed: 0.6
   attackRange: 0
   critMod: 1.6
   critChance: 0.15
@@ -2648,8 +2646,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
-  damageIcon: {fileID: 1100291844447224787}
-  speedIcon: {fileID: 3266788268881906710}
+  damageIcon: {fileID: 1285692702692994177}
+  speedIcon: {fileID: 7619168318941165098}
 --- !u!1 &4571511407790755166
 GameObject:
   m_ObjectHideFlags: 0
@@ -2768,7 +2766,7 @@ MonoBehaviour:
   baseDamage: 85
   damageValue: 0
   durability: 0
-  attackSpeed: 0
+  attackSpeed: 0.4
   attackRange: 0
   critMod: 1.6
   critChance: 0.15
@@ -2781,8 +2779,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
-  damageIcon: {fileID: 1100291844447224787}
-  speedIcon: {fileID: 3266788268881906710}
+  damageIcon: {fileID: 1285692702692994177}
+  speedIcon: {fileID: 7619168318941165098}
 --- !u!1 &4571511408041798185
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,7 +2899,7 @@ MonoBehaviour:
   baseDamage: 120
   damageValue: 0
   durability: 0
-  attackSpeed: 0
+  attackSpeed: 0.25
   attackRange: 0
   critMod: 1.6
   critChance: 0.15
@@ -2914,8 +2912,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
-  damageIcon: {fileID: 1100291844447224787}
-  speedIcon: {fileID: 3266788268881906710}
+  damageIcon: {fileID: 1285692702692994177}
+  speedIcon: {fileID: 7619168318941165098}
 --- !u!1 &4571511408070250485
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,7 +3032,7 @@ MonoBehaviour:
   baseDamage: 50
   damageValue: 0
   durability: 0
-  attackSpeed: 0
+  attackSpeed: 0.6
   attackRange: 0
   critMod: 1.6
   critChance: 0.15
@@ -3047,8 +3045,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
-  damageIcon: {fileID: 1100291844447224787}
-  speedIcon: {fileID: 3266788268881906710}
+  damageIcon: {fileID: 1285692702692994177}
+  speedIcon: {fileID: 7619168318941165098}
 --- !u!1 &4571511408276067399
 GameObject:
   m_ObjectHideFlags: 0
@@ -3167,7 +3165,7 @@ MonoBehaviour:
   baseDamage: 70
   damageValue: 0
   durability: 0
-  attackSpeed: 0
+  attackSpeed: 0.4
   attackRange: 0
   critMod: 1.6
   critChance: 0.15
@@ -3180,8 +3178,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
-  damageIcon: {fileID: 1100291844447224787}
-  speedIcon: {fileID: 3266788268881906710}
+  damageIcon: {fileID: 1285692702692994177}
+  speedIcon: {fileID: 7619168318941165098}
 --- !u!1 &4571511408287982293
 GameObject:
   m_ObjectHideFlags: 0
@@ -3300,7 +3298,7 @@ MonoBehaviour:
   baseDamage: 150
   damageValue: 0
   durability: 0
-  attackSpeed: 0
+  attackSpeed: 0.25
   attackRange: 0
   critMod: 1.6
   critChance: 0.15
@@ -3313,8 +3311,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
-  damageIcon: {fileID: 1100291844447224787}
-  speedIcon: {fileID: 3266788268881906710}
+  damageIcon: {fileID: 1285692702692994177}
+  speedIcon: {fileID: 7619168318941165098}
 --- !u!1 &4571511408461284862
 GameObject:
   m_ObjectHideFlags: 0
@@ -3433,7 +3431,7 @@ MonoBehaviour:
   baseDamage: 65
   damageValue: 0
   durability: 0
-  attackSpeed: 0
+  attackSpeed: 0.6
   attackRange: 0
   critMod: 1.6
   critChance: 0.15
@@ -3446,8 +3444,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
-  damageIcon: {fileID: 1100291844447224787}
-  speedIcon: {fileID: 3266788268881906710}
+  damageIcon: {fileID: 1285692702692994177}
+  speedIcon: {fileID: 7619168318941165098}
 --- !u!1 &4571511408511832641
 GameObject:
   m_ObjectHideFlags: 0
@@ -3566,7 +3564,7 @@ MonoBehaviour:
   baseDamage: 100
   damageValue: 0
   durability: 0
-  attackSpeed: 0
+  attackSpeed: 0.4
   attackRange: 0
   critMod: 1.6
   critChance: 0.15
@@ -3579,8 +3577,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
-  damageIcon: {fileID: 1100291844447224787}
-  speedIcon: {fileID: 3266788268881906710}
+  damageIcon: {fileID: 1285692702692994177}
+  speedIcon: {fileID: 7619168318941165098}
 --- !u!1 &4571511408577606570
 GameObject:
   m_ObjectHideFlags: 0
@@ -3699,7 +3697,7 @@ MonoBehaviour:
   baseDamage: 75
   damageValue: 0
   durability: 0
-  attackSpeed: 0
+  attackSpeed: 0.85
   attackRange: 0
   critMod: 1.6
   critChance: 0.15
@@ -3712,8 +3710,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
-  damageIcon: {fileID: 1100291844447224787}
-  speedIcon: {fileID: 3266788268881906710}
+  damageIcon: {fileID: 1285692702692994177}
+  speedIcon: {fileID: 7619168318941165098}
 --- !u!1 &4571511409014953872
 GameObject:
   m_ObjectHideFlags: 0
@@ -3832,7 +3830,7 @@ MonoBehaviour:
   baseDamage: 60
   damageValue: 0
   durability: 0
-  attackSpeed: 0
+  attackSpeed: 0.85
   attackRange: 0
   critMod: 1.6
   critChance: 0.15
@@ -3845,8 +3843,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
-  damageIcon: {fileID: 1100291844447224787}
-  speedIcon: {fileID: 3266788268881906710}
+  damageIcon: {fileID: 1285692702692994177}
+  speedIcon: {fileID: 7619168318941165098}
 --- !u!1 &4571511409064508596
 GameObject:
   m_ObjectHideFlags: 0
@@ -3965,7 +3963,7 @@ MonoBehaviour:
   baseDamage: 100
   damageValue: 0
   durability: 0
-  attackSpeed: 0
+  attackSpeed: 0.25
   attackRange: 0
   critMod: 1.6
   critChance: 0.15
@@ -3978,8 +3976,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
-  damageIcon: {fileID: 1100291844447224787}
-  speedIcon: {fileID: 3266788268881906710}
+  damageIcon: {fileID: 1285692702692994177}
+  speedIcon: {fileID: 7619168318941165098}
 --- !u!1 &4678568934885542963
 GameObject:
   m_ObjectHideFlags: 0
@@ -4578,14 +4576,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4772851540750600380}
-  m_RootOrder: 6
+  m_Father: {fileID: 4511803376574182979}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 225, y: 90}
-  m_SizeDelta: {x: 1, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 175, y: 40}
+  m_SizeDelta: {x: 150, y: 50}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &8441144610857634781
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4614,11 +4612,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 087df1c6a863e7f4094b47d64b746fff, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -5360,7 +5358,9 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1100291844447224787}
+  - {fileID: 3266788268881906710}
   m_Father: {fileID: 4772851540750600380}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

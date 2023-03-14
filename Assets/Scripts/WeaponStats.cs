@@ -25,7 +25,7 @@ public class WeaponStats : MonoBehaviour
     private float rand;
 
     //Image Icons
-    public Transform damageIcon, speedIcon;
+    public Image damageIcon, speedIcon;
     private float damageWidth, speedWidth;
 
     private void Start()
@@ -74,14 +74,12 @@ public class WeaponStats : MonoBehaviour
             }
         }
 
-        damageWidth = Mathf.Lerp(damageWidth, baseDamage*2, Time.deltaTime * 5f);
-        speedWidth = Mathf.Lerp(speedWidth, 100f/attackCooldown, Time.deltaTime * 5f);
 
-        damageIcon.localScale = new Vector3 (damageWidth, 1, 1);
-        damageIcon.transform.position = new Vector3((225f + damageWidth/2), 160f, 0f);
+        damageWidth = baseDamage/100f;
+        speedWidth = attackSpeed;
 
-        speedIcon.localScale = new Vector3(speedWidth, 1, 1);
-        speedIcon.transform.position = new Vector3((225f + speedWidth/2f), 90f, 0f);
+        damageIcon.fillAmount = damageWidth;
+        speedIcon.fillAmount = speedWidth;
 
     }
 

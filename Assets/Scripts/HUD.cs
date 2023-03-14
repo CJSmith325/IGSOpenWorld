@@ -30,7 +30,7 @@ public class HUD : MonoBehaviour
 
     void Update()
     {
-        HealthText.text = PlayerHealth + "/" + PlayerMaxHealth;
+        HealthText.text = (int)PlayerHealth + "/" + PlayerMaxHealth;
         
         regenTimer -= Time.deltaTime;
 
