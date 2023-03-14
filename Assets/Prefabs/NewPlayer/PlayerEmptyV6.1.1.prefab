@@ -4329,6 +4329,7 @@ MonoBehaviour:
   regenTimer: 0
   fill: 0
   healthPct: 0
+  GameOverCanvas: {fileID: 0}
 --- !u!136 &3838529674790465741
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4414,7 +4415,7 @@ MonoBehaviour:
     m_Bits: 1024
   enemyMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 8
   capsule: {fileID: 1354630617906055707}
 --- !u!54 &4571511409574481089
 Rigidbody:
@@ -6121,7 +6122,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 5943
+    m_Bits: 1855
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
