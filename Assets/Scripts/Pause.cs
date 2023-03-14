@@ -8,7 +8,7 @@ public class Pause : MonoBehaviour
 
     public static Pause Instance;
 
-    bool Swap = false;
+   // bool Swap = false;
 
     public KeyCode pauseButton;
 
