@@ -123,7 +123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201027898867090737}
   m_LocalRotation: {x: 0.26934493, y: 0.042242434, z: 0.05545709, w: 0.9605172}
-  m_LocalPosition: {x: -0.241, y: 0.207, z: -0.273}
+  m_LocalPosition: {x: -0.313, y: 0.258, z: -0.288}
   m_LocalScale: {x: 0.2313089, y: 0.45068225, z: 0.23130888}
   m_Children: []
   m_Father: {fileID: 4617397873984377668}
@@ -553,9 +553,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8505740354608789441}
   - component: {fileID: 4218764160325915517}
-  - component: {fileID: 5262137090811412103}
   - component: {fileID: 257667497803086797}
   - component: {fileID: 2567101419160105814}
+  - component: {fileID: 82141193}
   m_Layer: 0
   m_Name: GhostEnemyEmpty (1)
   m_TagString: Untagged
@@ -599,25 +599,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!95 &5262137090811412103
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2723518714913813971}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8595292f3c7854b40b796235ed7fa793, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!195 &257667497803086797
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -652,6 +633,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a405eecf2a9a0004f8d544986d460c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guardposition: {fileID: 0}
+  Guard: {fileID: 0}
   agent: {fileID: 257667497803086797}
   player: {fileID: 0}
   whatIsGround:
@@ -663,11 +646,31 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 8
   timeBetweenAttacks: 5
-  projectile: {fileID: 0}
-  sightRange: 20
-  attackRange: 20
+  attackDamage: 0
+  sightRange: 15
+  attackRange: 15
   playerInSightRange: 1
   playerInAttackRange: 1
+  playerHUD: {fileID: 0}
+--- !u!95 &82141193
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2723518714913813971}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 64800e1086ab32a4f92d9105dfeaa033, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3103367219603667893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,7 +1048,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4397792125695334946}
   m_LocalRotation: {x: -0.3475179, y: -0.06901376, z: 0.2515341, w: 0.90066594}
-  m_LocalPosition: {x: -0.14400005, y: 0.34800005, z: 0.06500006}
+  m_LocalPosition: {x: -0.144, y: 0.348, z: 0.065}
   m_LocalScale: {x: 0.23130889, y: 0.45068228, z: 0.23130888}
   m_Children: []
   m_Father: {fileID: 931969973696208642}
@@ -1333,7 +1336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6050246516296179511}
   m_LocalRotation: {x: -0.434754, y: -0.31761077, z: 0.2309937, w: 0.81040376}
-  m_LocalPosition: {x: -0.14499986, y: 0.39099985, z: 0.23099995}
+  m_LocalPosition: {x: -0.145, y: 0.391, z: 0.231}
   m_LocalScale: {x: 0.2313089, y: 0.45068228, z: 0.23130894}
   m_Children: []
   m_Father: {fileID: 6248445190265985807}
