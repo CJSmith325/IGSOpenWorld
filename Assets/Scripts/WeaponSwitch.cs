@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class WeaponSwitch : MonoBehaviour
 {
+    public static WeaponSwitch Instance;
 
     public int totalWeapons;
     public int activeWeapon;
@@ -21,6 +22,8 @@ public class WeaponSwitch : MonoBehaviour
 
     void Start()
     {
+        Instance = this;
+
         totalWeapons = 12;
         activeWeapon = 0;
 
@@ -59,27 +62,7 @@ public class WeaponSwitch : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(switchWeapon))
-        {
-            SwitchWeapons();
-        }
-        else if (Input.GetButtonDown("1"))
-        {
-            SwitchWeapons(0);
-        }
-        else if (Input.GetButtonDown("2"))
-        {
-            SwitchWeapons(3);
-        }
-        else if (Input.GetButtonDown("3"))
-        {
-            SwitchWeapons(6);
-        }
-        else if (Input.GetButtonDown("4"))
-        {
-            SwitchWeapons(9);
-        }
-
+        
     }
 
     public void SwitchWeapons()

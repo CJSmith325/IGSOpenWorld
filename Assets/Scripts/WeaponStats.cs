@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class WeaponStats : MonoBehaviour
 {
 
+    public static WeaponStats Instance;
+
     public GameObject Weapon;
 
     //basic attack vars
@@ -30,12 +32,11 @@ public class WeaponStats : MonoBehaviour
 
     private void Start()
     {
+        Instance = this;
 
         canAttack = true;
         critDamage = baseDamage * critMod;
-
-        damageWidth = 1f;
-        speedWidth = 1f;
+        
 
     }
 
@@ -75,11 +76,36 @@ public class WeaponStats : MonoBehaviour
         }
 
 
-        damageWidth = baseDamage/100f;
-        speedWidth = attackSpeed;
-
+        damageWidth = Mathf.Lerp(damageWidth, (baseDamage / 100f), 5f * Time.deltaTime);
+        speedWidth = Mathf.Lerp(speedWidth, attackSpeed, 5f * Time.deltaTime);
+        
         damageIcon.fillAmount = damageWidth;
         speedIcon.fillAmount = speedWidth;
+
+        if (canAttack)
+        {
+            if (Input.GetKeyDown(WeaponSwitch.Instance.switchWeapon))
+            {
+                WeaponSwitch.Instance.SwitchWeapons();
+            }
+            else if (Input.GetButtonDown("1"))
+            {
+                WeaponSwitch.Instance.SwitchWeapons(0);
+            }
+            else if (Input.GetButtonDown("2"))
+            {
+                WeaponSwitch.Instance.SwitchWeapons(3);
+            }
+            else if (Input.GetButtonDown("3"))
+            {
+                WeaponSwitch.Instance.SwitchWeapons(6);
+            }
+            else if (Input.GetButtonDown("4"))
+            {
+                WeaponSwitch.Instance.SwitchWeapons(9);
+            }
+        }
+
 
     }
 
