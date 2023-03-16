@@ -63,6 +63,7 @@ public class HUD : MonoBehaviour
         if (PlayerHealth <= 0)
         {
             //death mechanic go here
+            PlayerHealth = 0;
             GameOver();
 
         }
