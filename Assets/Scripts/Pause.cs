@@ -36,7 +36,7 @@ public class Pause : MonoBehaviour
         if (note.noteUI == false)
             if (note1.noteUI == false)
                 //Swap = !Swap;
-                 if (Time.timeScale == 1)
+                if (Time.timeScale == 1)
                  {
                     Debug.Log("About to change timescale ");
                     Time.timeScale = 0;
