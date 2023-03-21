@@ -31,31 +31,38 @@ public class Pause : MonoBehaviour
         }
     }
 
+     
+
     public void mPause()
     {
-        if (note.noteUI == false)
-            if (note1.noteUI == false)
+        //Removing this allows you to pause but brings back the note pause menu issue
+
+        //if (note.noteUI == false)
+        //    if (note1.noteUI == false)
+
+
                 //Swap = !Swap;
                 if (Time.timeScale == 1)
-                 {
-                    Debug.Log("About to change timescale ");
+                {
+                    Debug.Log("About to change timescale");
                     Time.timeScale = 0;
-                    Debug.Log(" timescale ");
-                    Debug.Log("About to lock cursor ");
+                    Debug.Log(" timescale");
+                    Debug.Log("About to lock cursor");
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
-                    Debug.Log("cursor locked ");
-                   // pauseCanvas.enabled = true;
-                  }
-                 else if (Time.timeScale == 0)
-                 {
-                    Debug.Log("About to change timescale ");
+                    Debug.Log("cursor locked");
+                    // pauseCanvas.enabled = true;
+                }
+                else if (Time.timeScale == 0)
+                {
+                    Debug.Log("About to change timescale");
                     Time.timeScale = 1;
-                    Debug.Log("timescale ");
+                    Debug.Log("timescale");
                     Cursor.lockState = CursorLockMode.Locked;
                     Cursor.visible = false;
 
                     //pauseCanvas.enabled = false;
+
                 }
     }
 }
