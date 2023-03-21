@@ -27,14 +27,19 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("Death Damage: " + damage);
-            Destroy(this.gameObject);
 
-            /*
-            Rigidbody rb = this.gameObject.AddComponent<Rigidbody>();
-            player = playerObj.transform;
-            launchAngle = this.gameObject.transform.position - player.position;
-            rb.AddForce(launchAngle * explosionForce);  //launch the ragdoll
-            */
+            Animator enemyAnim = gameObject.GetComponent<Animator>();
+            enemyAnim.SetTrigger("Death");
+
+            Debug.Log("Death Animation");
+
+            EnemyAi enemyAi = gameObject.GetComponent<EnemyAi>();
+            enemyAi.enabled = false;
+            EnemyMovement enemyMove = gameObject.GetComponent<EnemyMovement>();
+            enemyMove.enabled = false;
+
+            //wait 5 seconds and dissappear
+            Destroy(this.gameObject, 5f);
 
         }
     }

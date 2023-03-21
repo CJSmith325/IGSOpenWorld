@@ -59,7 +59,8 @@ public class HUD : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         PlayerHealth -= dmg;
-        regenTimer = 10f;
+        regenTimer = 5f;
+
         if (PlayerHealth <= 0)
         {
             //death mechanic go here
@@ -71,7 +72,7 @@ public class HUD : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 0;
-        System.Threading.Thread.Sleep(3000);
+        //System.Threading.Thread.Sleep(3000);
         //GameOverCanvas.SetActive(true);
         Cursor.visible = true;
         Respawn.Instance.PlayerRespawn();

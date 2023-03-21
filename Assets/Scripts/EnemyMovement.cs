@@ -9,16 +9,19 @@ public class EnemyMovement : MonoBehaviour
     public float range; //range of motion
     public Transform centrePoint; //the area the agent wants to move around in
 
+    public bool alive;
+
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        alive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(agent.remainingDistance <= agent.stoppingDistance) //done with set path
+        if(agent.remainingDistance <= agent.stoppingDistance && alive) //done with set path
         {
             Vector3 point;
             if (RandomPoint(centrePoint.position, range, out point))

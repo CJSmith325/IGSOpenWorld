@@ -131,10 +131,10 @@ public class PlayerMovement : MonoBehaviour
         //check each hit for a health script and do damage
         foreach (Collider coll in hit)
         {
-            Debug.Log(coll.gameObject.name + " hit");
+            //Debug.Log(coll.gameObject.name + " hit");
             if (coll.gameObject.GetComponent<EnemyHealth>() != null)
             {
-                Debug.Log(coll.gameObject.name + " script");
+                Debug.Log(coll.gameObject.name + " Current Health: " + coll.gameObject.GetComponent<EnemyHealth>().health);
                 coll.gameObject.GetComponent<EnemyHealth>().enemyTakeDamage(damage);
             }
         }
