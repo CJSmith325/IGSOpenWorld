@@ -24,6 +24,7 @@ public class Notes : MonoBehaviour
         Time.timeScale = 1;
         inReach = false;
         isOpen = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void OnTriggerEnter(Collider other)
