@@ -7,6 +7,7 @@ public class Pause : MonoBehaviour
 {
 
     public static Pause Instance;
+   // public Canvas pauseCanvas;
 
     public Notes note;
     public Notes note1;
@@ -37,19 +38,20 @@ public class Pause : MonoBehaviour
                 //Swap = !Swap;
                  if (Time.timeScale == 1)
                  {
-                Time.timeScale = 0;
+                    Time.timeScale = 0;
 
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-                   }
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                   // pauseCanvas.enabled = true;
+                  }
                  else if (Time.timeScale == 0)
                  {
-                Time.timeScale = 1;
+                    Time.timeScale = 1;
 
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = false;
 
-
-                  }
-                 }
+                    //pauseCanvas.enabled = false;
+                }
+    }
 }
