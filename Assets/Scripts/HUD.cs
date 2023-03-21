@@ -72,7 +72,7 @@ public class HUD : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 0;
-        //System.Threading.Thread.Sleep(3000);
+        System.Threading.Thread.Sleep(3000);
         //GameOverCanvas.SetActive(true);
         Cursor.visible = true;
         Respawn.Instance.PlayerRespawn();

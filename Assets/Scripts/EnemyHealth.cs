@@ -7,12 +7,10 @@ public class EnemyHealth : MonoBehaviour
 {
     public float health;
     public float maxHealth;
-
-
+    
     void Start()
     {
         health = maxHealth;
-
     }
 
     void Update()
@@ -27,21 +25,53 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("Death Damage: " + damage);
-
-            Animator enemyAnim = gameObject.GetComponent<Animator>();
-            enemyAnim.SetTrigger("Death");
-
-            Debug.Log("Death Animation");
-
-            EnemyAi enemyAi = gameObject.GetComponent<EnemyAi>();
-            enemyAi.enabled = false;
-            EnemyMovement enemyMove = gameObject.GetComponent<EnemyMovement>();
-            enemyMove.enabled = false;
-
-            //wait 5 seconds and dissappear
-            Destroy(this.gameObject, 5f);
-
+            enemyDeath();
         }
+    }
+
+    public void enemyDeath()
+    {
+        //find animator and play death animation
+        Animator enemyAnim = gameObject.GetComponent<Animator>();
+        enemyAnim.SetTrigger("Death");
+
+        //remove movement scripts
+        EnemyAi enemyAi = gameObject.GetComponent<EnemyAi>();
+        EnemyMovement enemyMove = gameObject.GetComponent<EnemyMovement>();
+        enemyAi.enabled = false;
+        enemyMove.enabled = false;
+
+        //StartCoroutine(StartFade());
+
+        //wait 5 seconds and dissappear
+        Destroy(this.gameObject, 5f);
+    }
+
+    IEnumerator StartFade()
+    {
+        yield return new WaitForSeconds(2.5f);
+        Debug.Log("Start Fade");
+
+      
+        Renderer[] bodyParts = (Renderer[])Object.FindObjectsOfType(typeof(Renderer));
+
+        float step = Time.deltaTime;
+
+        foreach (Renderer part in bodyParts)
+        {
+            if (part.gameObject.GetComponent<Collider>() != null)
+            {
+                Destroy(part.gameObject.GetComponent<Collider>());
+            }
+                
+            Color fade = part.material.color;
+            fade = new Color(fade.r, fade.g, fade.b, fade.a - .1f);
+
+            part.material.color = fade;
+                
+        }
+
+      
     }
 
 }

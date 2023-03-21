@@ -4209,6 +4209,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8049555791410113101, guid: a94f8a1a9f95dc74f8edbba7bf0cf139, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8049555791410113102, guid: a94f8a1a9f95dc74f8edbba7bf0cf139, type: 3}
       propertyPath: m_Name
       value: KnightEnemyV1 (8)
