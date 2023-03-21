@@ -7,6 +7,10 @@ public class Pause : MonoBehaviour
 {
 
     public static Pause Instance;
+   // public Canvas pauseCanvas;
+
+    public Notes note;
+    public Notes note1;
 
    // bool Swap = false;
 
@@ -27,24 +31,38 @@ public class Pause : MonoBehaviour
         }
     }
 
+     
+
     public void mPause()
     {
-        //Swap = !Swap;
-        if (Time.timeScale == 1)
-        {
-            Time.timeScale = 0;
+        //Removing this allows you to pause but brings back the note pause menu issue
 
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        else if (Time.timeScale == 0)
-        {
-            Time.timeScale = 1;
-
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+        //if (note.noteUI == false)
+        //    if (note1.noteUI == false)
 
 
-        }
+                //Swap = !Swap;
+                if (Time.timeScale == 1)
+                {
+                    Debug.Log("About to change timescale");
+                    Time.timeScale = 0;
+                    Debug.Log(" timescale");
+                    Debug.Log("About to lock cursor");
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                    Debug.Log("cursor locked");
+                    // pauseCanvas.enabled = true;
+                }
+                else if (Time.timeScale == 0)
+                {
+                    Debug.Log("About to change timescale");
+                    Time.timeScale = 1;
+                    Debug.Log("timescale");
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = false;
+
+                    //pauseCanvas.enabled = false;
+
+                }
     }
 }
