@@ -790,7 +790,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1847
+    m_Bits: 1855
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1933,7 +1933,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &476325458447825915
 Transform:
   m_ObjectHideFlags: 0
@@ -1985,7 +1985,7 @@ MonoBehaviour:
     m_Bits: 1024
   enemyMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 8
   capsule: {fileID: 7129378671843206447}
 --- !u!54 &5714359946268140533
 Rigidbody:
@@ -2016,7 +2016,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
-  m_SlopeLimit: 45
+  m_SlopeLimit: 50
   m_StepOffset: 1
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -2915,6 +2915,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
+  damageIcon: {fileID: 0}
+  speedIcon: {fileID: 0}
 --- !u!1 &5714359944790920673
 GameObject:
   m_ObjectHideFlags: 0
@@ -3046,6 +3048,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
+  damageIcon: {fileID: 0}
+  speedIcon: {fileID: 0}
 --- !u!1 &5714359945004358814
 GameObject:
   m_ObjectHideFlags: 0
@@ -3177,6 +3181,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
+  damageIcon: {fileID: 0}
+  speedIcon: {fileID: 0}
 --- !u!1 &5714359945154423498
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,6 +3314,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
+  damageIcon: {fileID: 0}
+  speedIcon: {fileID: 0}
 --- !u!1 &5714359945204546933
 GameObject:
   m_ObjectHideFlags: 0
@@ -3439,6 +3447,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
+  damageIcon: {fileID: 0}
+  speedIcon: {fileID: 0}
 --- !u!1 &5714359945276046634
 GameObject:
   m_ObjectHideFlags: 0
@@ -3570,6 +3580,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
+  damageIcon: {fileID: 0}
+  speedIcon: {fileID: 0}
 --- !u!1 &5714359945316420870
 GameObject:
   m_ObjectHideFlags: 0
@@ -3701,6 +3713,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
+  damageIcon: {fileID: 0}
+  speedIcon: {fileID: 0}
 --- !u!1 &5714359945367839338
 GameObject:
   m_ObjectHideFlags: 0
@@ -3832,6 +3846,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
+  damageIcon: {fileID: 0}
+  speedIcon: {fileID: 0}
 --- !u!1 &5714359945540355357
 GameObject:
   m_ObjectHideFlags: 0
@@ -3963,6 +3979,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
+  damageIcon: {fileID: 0}
+  speedIcon: {fileID: 0}
 --- !u!1 &5714359945645859009
 GameObject:
   m_ObjectHideFlags: 0
@@ -4094,6 +4112,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
+  damageIcon: {fileID: 0}
+  speedIcon: {fileID: 0}
 --- !u!1 &5714359946832909184
 GameObject:
   m_ObjectHideFlags: 0
@@ -4225,6 +4245,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
+  damageIcon: {fileID: 0}
+  speedIcon: {fileID: 0}
 --- !u!1 &5714359946848909476
 GameObject:
   m_ObjectHideFlags: 0
@@ -4356,6 +4378,8 @@ MonoBehaviour:
   critSlash: {fileID: 0}
   chop: {fileID: 0}
   critChop: {fileID: 0}
+  damageIcon: {fileID: 0}
+  speedIcon: {fileID: 0}
 --- !u!1 &5975564179889941631
 GameObject:
   m_ObjectHideFlags: 0
@@ -5064,7 +5088,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4366908109221791001
 RectTransform:
   m_ObjectHideFlags: 0
