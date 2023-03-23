@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public float health;
     public float maxHealth;
+    public GameObject knightParticle;
     
     void Start()
     {
@@ -20,8 +21,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void enemyTakeDamage(float damage)
     {
-        health -= damage;
-
+        health -= damage + Random.Range(0, 10);
+        Instantiate(knightParticle, transform.position, Quaternion.identity);
         if (health <= 0)
         {
             Debug.Log("Death Damage: " + damage);

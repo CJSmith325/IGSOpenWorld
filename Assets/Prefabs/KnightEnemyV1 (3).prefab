@@ -3471,7 +3471,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 100
+  maxHealth: 150
+  knightParticle: {fileID: 7646035821882979712, guid: 78b7f267a85f8a345b96a2ac4dc3ce28, type: 3}
 --- !u!1 &8654102540597737658
 GameObject:
   m_ObjectHideFlags: 0
