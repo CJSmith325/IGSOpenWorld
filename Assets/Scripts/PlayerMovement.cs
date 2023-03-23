@@ -38,6 +38,10 @@ public class PlayerMovement : MonoBehaviour
     //player morphs
     public Transform capsule;
 
+    //player camera
+    public Camera mainCam;
+    Vector3 hitPoint;
+
     private void Start()
     {
         Instance = this;
@@ -123,10 +127,16 @@ public class PlayerMovement : MonoBehaviour
 
     public void HitMarker(float damage)
     {
-
         Vector3 spherePos = this.transform.position + Vector3.Normalize(move);
+        int range = 6;
+        Collider[] hit = Physics.OverlapSphere(spherePos, range/2f, enemyMask);
+        
+        RaycastHit ray;
 
-        Collider[] hit = Physics.OverlapSphere(spherePos, 3f, enemyMask);
+        if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out ray, range + 2f))
+        {
+            Debug.Log("ray.point: " + ray.point);
+        }
 
         //check each hit for a health script and do damage
         foreach (Collider coll in hit)
@@ -136,10 +146,9 @@ public class PlayerMovement : MonoBehaviour
             {
                 Debug.Log(coll.gameObject.name + " Current Health: " + coll.gameObject.GetComponent<EnemyHealth>().health);
                 coll.gameObject.GetComponent<EnemyHealth>().enemyTakeDamage(damage);
+                //coll.gameObject.GetComponent<EnemyHealth>().particleSpawn = ray.point;
             }
         }
-
-
     }
     public void OnTriggerEnter(Collider other)
     {

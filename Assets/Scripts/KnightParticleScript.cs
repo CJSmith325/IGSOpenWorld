@@ -6,6 +6,12 @@ public class KnightParticleScript : MonoBehaviour
 {
     public float lifespan = 0f;
 
+    private void Start()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        transform.LookAt(player.transform);
+    }
+
     // Update is called once per frame
     void Update()
     {

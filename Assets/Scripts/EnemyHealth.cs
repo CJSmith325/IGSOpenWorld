@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     public float health;
     public float maxHealth;
     public GameObject knightParticle;
+    public Vector3 particleSpawn;
     
     void Start()
     {
@@ -22,7 +23,9 @@ public class EnemyHealth : MonoBehaviour
     public void enemyTakeDamage(float damage)
     {
         health -= damage + Random.Range(0, 10);
-        Instantiate(knightParticle, transform.position, Quaternion.identity);
+
+        spawnDamageParticle();
+
         if (health <= 0)
         {
             Debug.Log("Death Damage: " + damage);
@@ -42,7 +45,7 @@ public class EnemyHealth : MonoBehaviour
         enemyAi.enabled = false;
         enemyMove.enabled = false;
 
-        //StartCoroutine(StartFade());
+        StartCoroutine(StartFade());
 
         //wait 5 seconds and dissappear
         Destroy(this.gameObject, 5f);
@@ -53,26 +56,49 @@ public class EnemyHealth : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         Debug.Log("Start Fade");
 
-      
-        Renderer[] bodyParts = (Renderer[])Object.FindObjectsOfType(typeof(Renderer));
+        InvokeRepeating("DirkNowitzki", 0f, .1f);
+    }
 
-        float step = Time.deltaTime;
+
+    public void DirkNowitzki()
+    {
+        float fadeVal = .7f;
+        float fadeStep = 2f;
+        float step = Time.deltaTime * fadeStep;
+
+        Renderer[] bodyParts = gameObject.GetComponentsInChildren<Renderer>();
+
 
         foreach (Renderer part in bodyParts)
         {
             if (part.gameObject.GetComponent<Collider>() != null)
             {
+                //remove collision physics
                 Destroy(part.gameObject.GetComponent<Collider>());
             }
-                
-            Color fade = part.material.color;
-            fade = new Color(fade.r, fade.g, fade.b, fade.a - .1f);
 
-            part.material.color = fade;
-                
+            //find some way to fade the material out
+            
+            part.material.color = new Color(part.material.color.r, part.material.color.g, part.material.color.b, part.material.color.a * fadeVal);
+        
         }
 
-      
     }
 
+    public void spawnDamageParticle()
+    {
+        knightParticle = WeaponStats.Instance.farticleEffect;
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        particleSpawn = transform.position - (transform.position - player.transform.position).normalized;
+        //particleSpawn -= (transform.position - player.transform.position).normalized;
+
+        Debug.Log("particleSpawn" + particleSpawn);
+
+        Instantiate(knightParticle, particleSpawn, Quaternion.identity);
+
+    }
 }
+
+
