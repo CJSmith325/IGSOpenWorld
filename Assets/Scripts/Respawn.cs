@@ -9,6 +9,7 @@ public class Respawn : MonoBehaviour
     public bool TouchingSpawn = false;
     public Transform Player;
     public Transform SpawnPoint;
+    public GameObject mPlayer;
     private Vector3 SpawnLocation;
     public KeyCode respawn;
     public KeyCode SetSpawn;
@@ -28,7 +29,7 @@ public class Respawn : MonoBehaviour
             SpawnPointSelection();
         }
 
-        if (Input.GetKeyDown(respawn)) //Calls Respawn Function
+        if (Input.GetKeyDown(respawn) || HUD.Instance.PlayerHealth <= 0) //Calls Respawn Function
         {
             PlayerRespawn();
         }
@@ -40,7 +41,8 @@ public class Respawn : MonoBehaviour
     {
         Debug.Log("SpawnPoint: " + SpawnPoint.transform.position);
         Debug.Log("TP");
-        Player.transform.position = SpawnLocation; //Sets player Position to SpawnLocations saved position.
+        //GetComponent<Collider>().gameObject.tag = "player";
+        Player.transform.position = SpawnPoint.transform.position; //Sets player Position to SpawnLocations saved position.
         HUD.Instance.PlayerHealth = HUD.Instance.PlayerMaxHealth;
         //HUD.Instance.GameOverCanvas.SetActive(false);
         Debug.Log("PlayerHealth: " + HUD.Instance.PlayerHealth);
@@ -52,18 +54,27 @@ public class Respawn : MonoBehaviour
     {
         SpawnLocation = Player.transform.position;
     }
-/*    void OnTriggerEnter(Collider other)
+
+    public void GameOver()
     {
-        if (other.gameObject.tag == "Respawn")
-        {
-            TouchingSpawn = true;
-        }
+        //Time.timeScale = 0;
+        //System.Threading.Thread.Sleep(3000);
+        //GameOverCanvas.SetActive(true);
+        Cursor.visible = true;
+        PlayerRespawn();
     }
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Respawn")
+    /*    void OnTriggerEnter(Collider other)
         {
-            TouchingSpawn = false;
+            if (other.gameObject.tag == "Respawn")
+            {
+                TouchingSpawn = true;
+            }
         }
-    }   */
+        void OnTriggerExit(Collider other)
+        {
+            if (other.gameObject.tag == "Respawn")
+            {
+                TouchingSpawn = false;
+            }
+        }   */
 }

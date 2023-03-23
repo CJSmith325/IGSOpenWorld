@@ -65,16 +65,8 @@ public class HUD : MonoBehaviour
         {
             //death mechanic go here
             PlayerHealth = 0;
-            GameOver();
+            //Respawn.Instance.GameOver();
 
         }
-    }
-    public void GameOver()
-    {
-        Time.timeScale = 0;
-        System.Threading.Thread.Sleep(3000);
-        //GameOverCanvas.SetActive(true);
-        Cursor.visible = true;
-        Respawn.Instance.PlayerRespawn();
     }
 }
