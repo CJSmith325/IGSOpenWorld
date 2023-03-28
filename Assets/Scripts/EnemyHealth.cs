@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     public float maxHealth;
     public GameObject knightParticle;
     public Vector3 particleSpawn;
+    public GameObject[] drop;
     
     void Start()
     {
@@ -46,9 +47,25 @@ public class EnemyHealth : MonoBehaviour
         enemyMove.enabled = false;
 
         StartCoroutine(StartFade());
-
+        drops();
         //wait 5 seconds and dissappear
         Destroy(this.gameObject, 5f);
+    }
+    public void drops()
+    {
+        if (Random.Range(1, 5) == 1)
+        {
+            Instantiate(drop[0], transform.position, Quaternion.identity);
+        }
+        if (Random.Range(1, 10) == 1)
+        {
+            Instantiate(drop[1], transform.position, Quaternion.identity);
+        }
+        if (Random.Range(1, 10) == 1)
+        {
+            Instantiate(drop[2], transform.position, Quaternion.identity);
+        }
+
     }
 
     IEnumerator StartFade()

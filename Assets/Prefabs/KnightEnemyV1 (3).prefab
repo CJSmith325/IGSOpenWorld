@@ -3473,6 +3473,11 @@ MonoBehaviour:
   health: 0
   maxHealth: 150
   knightParticle: {fileID: 7646035821882979712, guid: 78b7f267a85f8a345b96a2ac4dc3ce28, type: 3}
+  particleSpawn: {x: 0, y: 0, z: 0}
+  drop:
+  - {fileID: 949690930746254989, guid: eb40b6aa112882445a545bfffecd21a3, type: 3}
+  - {fileID: 3414558390358921593, guid: 3935ed0157f45a1438c0a1bdaf4e3dbd, type: 3}
+  - {fileID: 6906278195387150753, guid: 3dd6378226be7e64c991a523a6d3cc89, type: 3}
 --- !u!1 &8654102540597737658
 GameObject:
   m_ObjectHideFlags: 0
