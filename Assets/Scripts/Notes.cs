@@ -47,11 +47,11 @@ public class Notes : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Interact") && inReach && !isOpen)
+        if (Input.GetButtonDown("Interact") && inReach && !isOpen && !Pause.Instance.isPaused)
         {
             OpenMap(); 
         }
-        else if (Input.GetButtonDown("Interact") && inReach && isOpen)
+        else if (Input.GetButtonDown("Interact") && inReach && isOpen && Pause.Instance.isPaused)
         {
             CloseMap();
         }
