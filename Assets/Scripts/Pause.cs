@@ -13,7 +13,9 @@ public class Pause : MonoBehaviour
     public Notes note;
     public Notes note1;
     
-    public bool isPaused; 
+   //isPaused needs to be fixed due to stopping the issue e (E to get out of the note and map no longer works when this is online)
+
+    //public bool isPaused; 
 
    // bool Swap = false;
 
@@ -22,7 +24,7 @@ public class Pause : MonoBehaviour
     public void Start()
     {
         Instance = this;
-        isPaused = false;
+        //isPaused = false;
     }
 
     // Update is called once per frame
@@ -46,7 +48,7 @@ public class Pause : MonoBehaviour
 
 
         //Swap = !Swap;
-        if (Time.timeScale == 1 && !isPaused)
+        if (Time.timeScale == 1 /*&& !isPaused*/)
         {
             Debug.Log("About to change timescale");
             Time.timeScale = 0;
@@ -57,9 +59,9 @@ public class Pause : MonoBehaviour
             Debug.Log("cursor locked");
             //pauseCanvas.enabled = true;
             pauseCanvas.SetActive(true);
-            isPaused = true;
+            //isPaused = true;
         }
-        else if (Time.timeScale == 0 && isPaused)
+        else if (Time.timeScale == 0 /*&& isPaused*/)
         {
             Debug.Log("About to change timescale");
             Time.timeScale = 1;
@@ -69,7 +71,7 @@ public class Pause : MonoBehaviour
 
             //pauseCanvas.enabled = false;
             pauseCanvas.SetActive(false);
-            isPaused = false;
+            //isPaused = false;
 
         }
     }
