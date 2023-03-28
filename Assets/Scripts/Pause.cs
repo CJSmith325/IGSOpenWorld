@@ -12,6 +12,7 @@ public class Pause : MonoBehaviour
 
     public Notes note;
     public Notes note1;
+    
     public bool isPaused; 
 
    // bool Swap = false;
