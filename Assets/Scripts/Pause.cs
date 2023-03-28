@@ -37,8 +37,8 @@ public class Pause : MonoBehaviour
     {
         //Removing this allows you to pause but brings back the note pause menu issue
 
-        //if (note.noteUI == false)
-        //    if (note1.noteUI == false)
+        if (note.noteUI.activeSelf == false)
+            if (note1.noteUI.activeSelf == false)
 
 
                 //Swap = !Swap;

@@ -10,6 +10,8 @@ public class WeaponStats : MonoBehaviour
 
     public GameObject Weapon;
 
+    public GameObject farticleEffect;
+
     //basic attack vars
     public float baseDamage, damageValue, durability, attackSpeed, attackRange;
 
