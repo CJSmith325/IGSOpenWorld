@@ -45,12 +45,12 @@ public class LeverDoor1 : MonoBehaviour
         {
             DoorOpens();
             onOB.SetActive(true);
-            offOB.SetActive(false);
+           
         }
         else
         {
             DoorCloses();
-            onOB.SetActive(false);
+           
             offOB.SetActive(true);
         }
     }
@@ -63,6 +63,7 @@ public class LeverDoor1 : MonoBehaviour
         //doorSound.Play();
         onOB.SetActive(true);
         offOB.SetActive(false);
+
     }
 
     void DoorCloses()
@@ -72,5 +73,6 @@ public class LeverDoor1 : MonoBehaviour
         door.SetBool("closed", true);
         onOB.SetActive(false);
         offOB.SetActive(true);
+
     }
 }
