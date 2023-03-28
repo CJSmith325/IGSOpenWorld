@@ -129,8 +129,8 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 spherePos = this.transform.position + Vector3.Normalize(move);
         int range = 6;
-        Collider[] hit = Physics.OverlapSphere(spherePos, range/2f, enemyMask);
-        
+        Collider[] hit = Physics.OverlapSphere(spherePos, range / 2f, enemyMask);
+
         RaycastHit ray;
 
         if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out ray, range + 2f))
@@ -150,6 +150,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Water")

@@ -9,7 +9,6 @@ public class WeaponStats : MonoBehaviour
     public static WeaponStats Instance;
 
     public GameObject Weapon;
-
     public GameObject farticleEffect;
 
     //basic attack vars
@@ -17,6 +16,7 @@ public class WeaponStats : MonoBehaviour
 
     //damage mods
     public float critMod, critChance, critDamage;
+    public bool crit;
 
     //attack timers
     public float attackCooldown;
@@ -183,12 +183,14 @@ public class WeaponStats : MonoBehaviour
         {
             damageValue = baseDamage;
             attackSound = slash;
+            crit = false;
         }
         else
         {
             Debug.Log("CRIT!!");
             damageValue = critDamage;
             attackSound = critSlash;
+            crit = true;
         }
     }
 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6863069067905643157}
   - component: {fileID: 1989005589663767092}
   m_Layer: 10
-  m_Name: Legendary Particle
+  m_Name: Critical PE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

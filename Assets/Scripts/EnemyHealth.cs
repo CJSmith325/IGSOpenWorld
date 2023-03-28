@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     public float health;
     public float maxHealth;
     public GameObject knightParticle;
+    public GameObject critParticle;
     public Vector3 particleSpawn;
     public GameObject[] drop;
     
@@ -95,9 +96,10 @@ public class EnemyHealth : MonoBehaviour
             }
 
             //find some way to fade the material out
-            
-            part.material.color = new Color(part.material.color.r, part.material.color.g, part.material.color.b, part.material.color.a * fadeVal);
-        
+
+            part.material.color = new Color(part.material.color.r * fadeVal, part.material.color.g * fadeVal, part.material.color.b * fadeVal, part.material.color.a);
+            //part.material.color = new Color(part.material.color.r, part.material.color.g, part.material.color.b, part.material.color.a * fadeVal);
+
         }
 
     }
@@ -113,8 +115,14 @@ public class EnemyHealth : MonoBehaviour
 
         Debug.Log("particleSpawn" + particleSpawn);
 
-        Instantiate(knightParticle, particleSpawn, Quaternion.identity);
-
+        if (WeaponStats.Instance.crit)
+        {
+            Instantiate(critParticle, particleSpawn, Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(knightParticle, particleSpawn, Quaternion.identity);
+        }
     }
 }
 
