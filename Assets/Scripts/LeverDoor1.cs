@@ -8,6 +8,7 @@ public class LeverDoor1 : MonoBehaviour
     public GameObject openText;
     public GameObject onOB;
     public GameObject offOB;
+   
 
     //public AudioSource doorSound;
 
@@ -44,14 +45,12 @@ public class LeverDoor1 : MonoBehaviour
         if (inReach && Input.GetButtonDown("Interact"))
         {
             DoorOpens();
-            onOB.SetActive(true);
            
         }
         else
         {
             DoorCloses();
-           
-            offOB.SetActive(true);
+  
         }
     }
 
@@ -61,8 +60,8 @@ public class LeverDoor1 : MonoBehaviour
         door.SetBool("open", true);
         door.SetBool("closed", false);
         //doorSound.Play();
-        onOB.SetActive(true);
-        offOB.SetActive(false);
+        onOB.SetActive(false);
+        offOB.SetActive(true);
 
     }
 
@@ -71,8 +70,8 @@ public class LeverDoor1 : MonoBehaviour
         Debug.Log("It Closes");
         door.SetBool("open", false);
         door.SetBool("closed", true);
-        onOB.SetActive(false);
-        offOB.SetActive(true);
-
+        onOB.SetActive(true);
+        offOB.SetActive(false);
+      
     }
 }
