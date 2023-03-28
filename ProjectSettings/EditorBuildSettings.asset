@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Instructions.unity
     guid: d8606ef7168802244840056319b692b5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Modeling.unity
     guid: d73a92a54484b554ba7321e5c28122e4
   - enabled: 0
