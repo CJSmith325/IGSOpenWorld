@@ -7,7 +7,8 @@ public class Pause : MonoBehaviour
 {
 
     public static Pause Instance;
-   // public Canvas pauseCanvas;
+    //public Canvas pauseCanvas;
+    public GameObject pauseCanvas;
 
     public Notes note;
     public Notes note1;
@@ -51,7 +52,8 @@ public class Pause : MonoBehaviour
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
                     Debug.Log("cursor locked");
-                    // pauseCanvas.enabled = true;
+                    //pauseCanvas.enabled = true;
+                    pauseCanvas.SetActive(true);
                 }
                 else if (Time.timeScale == 0)
                 {
@@ -62,7 +64,15 @@ public class Pause : MonoBehaviour
                     Cursor.visible = false;
 
                     //pauseCanvas.enabled = false;
+                    pauseCanvas.SetActive(false);
 
                 }
+    }
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        pauseCanvas.SetActive(false);
     }
 }
