@@ -9,7 +9,6 @@ public class Respawn : MonoBehaviour
     public bool TouchingSpawn = false;
     public Transform Player;
     public Transform SpawnPoint;
-    public GameObject mPlayer;
     private Vector3 SpawnLocation;
     public KeyCode respawn;
     public KeyCode SetSpawn;
@@ -21,7 +20,7 @@ public class Respawn : MonoBehaviour
         //GameOverCanvas.SetActive(false);
         Instance = this;
         SpawnLocation = SpawnPoint.transform.position; //Sets Player SpawnLocation to Spawnpoint Position.
-
+        Player = GameObject.FindGameObjectWithTag("Player").transform;
     }
     // Update is called once per frame
     void Update()

@@ -3473,6 +3473,7 @@ MonoBehaviour:
   health: 0
   maxHealth: 150
   knightParticle: {fileID: 7646035821882979712, guid: 78b7f267a85f8a345b96a2ac4dc3ce28, type: 3}
+  critParticle: {fileID: 3404488243158560179, guid: ef890bb414bb93b4cbd79581b9b8c1b7, type: 3}
   particleSpawn: {x: 0, y: 0, z: 0}
   drop:
   - {fileID: 949690930746254989, guid: eb40b6aa112882445a545bfffecd21a3, type: 3}

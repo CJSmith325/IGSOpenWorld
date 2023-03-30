@@ -78,7 +78,7 @@ public class WeaponStats : MonoBehaviour
         }
 
 
-        damageWidth = Mathf.Lerp(damageWidth, (baseDamage / 100f), 5f * Time.deltaTime);
+        damageWidth = Mathf.Lerp(damageWidth, (baseDamage / 150f), 5f * Time.deltaTime);
         speedWidth = Mathf.Lerp(speedWidth, attackSpeed, 5f * Time.deltaTime);
         
         damageIcon.fillAmount = damageWidth;
