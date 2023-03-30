@@ -12,6 +12,7 @@ public class Pause : MonoBehaviour
 
     public Notes note;
     public Notes note1;
+    public Notes note2;
     
    //isPaused needs to be fixed due to stopping the issue e (E to get out of the note and map no longer works when this is online)
 
@@ -45,9 +46,10 @@ public class Pause : MonoBehaviour
 
         if (note.noteUI.activeSelf == false)
             if (note1.noteUI.activeSelf == false)
+                if (note2.noteUI.activeSelf == false)
 
 
-        //Swap = !Swap;
+                    //Swap = !Swap;
         if (Time.timeScale == 1 /*&& !isPaused*/)
         {
             Debug.Log("About to change timescale");
