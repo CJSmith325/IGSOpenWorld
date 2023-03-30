@@ -33,7 +33,7 @@ public class Respawn : MonoBehaviour
 
         if (Input.GetKeyDown(respawn) || HUD.Instance.PlayerHealth <= 0) //Calls Respawn Function
         {
-            GameOverCanvas.SetActive(true);
+            //GameOverCanvas.SetActive(true);
             PlayerRespawn();
         }
         
