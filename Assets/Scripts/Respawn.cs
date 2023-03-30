@@ -33,7 +33,11 @@ public class Respawn : MonoBehaviour
 
         if (Input.GetKeyDown(respawn) || HUD.Instance.PlayerHealth <= 0) //Calls Respawn Function
         {
-            GameOverCanvas.SetActive(true);
+            Time.timeScale = 0;
+            //Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.None;          //Change this later
+            //GameOverCanvas.SetActive(true);
+            Debug.Log("Canvas is active.");
             PlayerRespawn();
         }
         
@@ -47,15 +51,17 @@ public class Respawn : MonoBehaviour
         //GetComponent<Collider>().gameObject.tag = "player";
         Player.transform.position = SpawnPoint.transform.position; //Sets player Position to SpawnLocations saved position.
         HUD.Instance.PlayerHealth = HUD.Instance.PlayerMaxHealth;
-        //HUD.Instance.GameOverCanvas.SetActive(false);
+        //GameOverCanvas.SetActive(false);     //Change this later
         Debug.Log("PlayerHealth: " + HUD.Instance.PlayerHealth);
         Debug.Log("SpawnLocation: " + SpawnLocation + "\tplayerLocation: " + Player.transform.position);
+        Cursor.visible = false;
         Time.timeScale = 1;
     }
 
     void SpawnPointSelection()
     {
         SpawnLocation = Player.transform.position;
+        Debug.Log("SPAWNPOINT SET");
     }
 
     public void GameOver()
