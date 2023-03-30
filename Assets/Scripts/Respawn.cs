@@ -13,12 +13,12 @@ public class Respawn : MonoBehaviour
     private Vector3 SpawnLocation;
     public KeyCode respawn;
     public KeyCode SetSpawn;
-    public GameObject GameOverCanvas;
+    //public GameObject GameOverCanvas;
     //public GameObject Reach;
     // Start is called before the first frame update
     void Start()
     {
-        GameOverCanvas.SetActive(false);
+        //GameOverCanvas.SetActive(false);
         Instance = this;
         SpawnLocation = SpawnPoint.transform.position; //Sets Player SpawnLocation to Spawnpoint Position.
 
