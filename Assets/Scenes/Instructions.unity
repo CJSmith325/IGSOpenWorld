@@ -816,14 +816,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ctrl = Crouch
+  m_text: 'Q = Weapon Switching
 
     Shift = Sprint
 
-    Left Mouse Click = Attack 1
+    Left Mouse Click = Attack
+    1
 
-    Right
-    Mouse Click = Attack 2'
+    Right Mouse Click = Attack 2'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92f9e95a0d4bb8343bec975ea27b80f8, type: 2}
   m_sharedMaterial: {fileID: 288851538502574633, guid: 92f9e95a0d4bb8343bec975ea27b80f8, type: 2}

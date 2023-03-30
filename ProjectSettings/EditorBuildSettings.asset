@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/CastleTesting.unity
     guid: 26b8362cb97e6d54081f6a57a4df9a77
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KeyTest.unity
     guid: a65be9d8f4d250c4ea5ba9ed4aefc7ba
   m_configObjects: {}
