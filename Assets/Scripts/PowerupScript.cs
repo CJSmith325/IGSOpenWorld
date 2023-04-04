@@ -24,7 +24,7 @@ public class PowerupScript : MonoBehaviour
     void Update()
     {
         distanceFromPlayer = transform.position - player.position;
-        if (distanceFromPlayer.magnitude <= 1.5f)
+        if (distanceFromPlayer.magnitude <= 1.6f)
         {
             PickupPowerup();
             Destroy(gameObject);
