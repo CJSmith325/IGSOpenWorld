@@ -77,7 +77,6 @@ public class WeaponStats : MonoBehaviour
             }
         }
 
-
         damageWidth = Mathf.Lerp(damageWidth, (baseDamage / 150f), 5f * Time.deltaTime);
         speedWidth = Mathf.Lerp(speedWidth, attackSpeed, 5f * Time.deltaTime);
         
