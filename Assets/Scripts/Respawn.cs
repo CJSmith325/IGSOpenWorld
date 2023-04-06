@@ -44,7 +44,8 @@ public class Respawn : MonoBehaviour
         Debug.Log("SpawnPoint: " + SpawnPoint.transform.position);
         Debug.Log("TP");
         //GetComponent<Collider>().gameObject.tag = "player";
-        Player.transform.position = SpawnPoint.transform.position; //Sets player Position to SpawnLocations saved position.
+        //Player.transform.position = SpawnPoint.transform.position; //Sets player Position to SpawnLocations saved position.
+        Player.transform.position = SpawnLocation;
         HUD.Instance.PlayerHealth = HUD.Instance.PlayerMaxHealth;
         //HUD.Instance.GameOverCanvas.SetActive(false);
         Debug.Log("PlayerHealth: " + HUD.Instance.PlayerHealth);
@@ -55,6 +56,7 @@ public class Respawn : MonoBehaviour
     void SpawnPointSelection()
     {
         SpawnLocation = Player.transform.position;
+        Debug.Log("");
     }
 
     public void GameOver()
