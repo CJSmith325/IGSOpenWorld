@@ -52,7 +52,6 @@ public class EnemyAi : MonoBehaviour
             EnemyGuard = true;
         }
 
-
         if (EnemyGuard == true)
         {
             if (!playerInSightRange) Idle();
@@ -89,7 +88,6 @@ public class EnemyAi : MonoBehaviour
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
 
-
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
         if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
@@ -106,7 +104,10 @@ public class EnemyAi : MonoBehaviour
         //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
 
-        transform.LookAt(player);
+        //transform.LookAt(player);
+        Vector3 LookDirection = new Vector3(player.transform.position.x, this.transform.position.y, player.transform.position.z);
+        transform.LookAt(LookDirection);
+
 
         if (!alreadyAttacked)
         {
@@ -115,15 +116,14 @@ public class EnemyAi : MonoBehaviour
             //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
 
-
             //GetComponent<Animator>().Play("EnemyAxeSwing");
 
             playerHUD.TakeDamage(attackDamage + Random.Range(0, 10));
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
-
     }
+
     private void ResetAttack()
     {
         alreadyAttacked = false;

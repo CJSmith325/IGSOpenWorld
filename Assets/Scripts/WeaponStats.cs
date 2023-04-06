@@ -106,8 +106,6 @@ public class WeaponStats : MonoBehaviour
                 WeaponSwitch.Instance.SwitchWeapons(9);
             }
         }
-
-
     }
 
     public void SwordSwing()
@@ -174,7 +172,6 @@ public class WeaponStats : MonoBehaviour
         canAttack = true;
     }
 
-   
     public void CriticalHit()
     {
         rand = Random.Range(0f, 1f);
@@ -192,5 +189,4 @@ public class WeaponStats : MonoBehaviour
             crit = true;
         }
     }
-
 }
