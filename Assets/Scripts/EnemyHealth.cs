@@ -7,24 +7,25 @@ public class EnemyHealth : MonoBehaviour
 {
     public float health;
     public float maxHealth;
+    public float healthPct;
     public GameObject knightParticle;
     public GameObject critParticle;
     public Vector3 particleSpawn;
     public GameObject[] drop;
+
+    public Image healthBar, healthBackground;
     
     void Start()
     {
         health = maxHealth;
     }
 
-    void Update()
-    {
-        
-    }
+
 
     public void enemyTakeDamage(float damage)
     {
         health -= damage + Random.Range(0, 10);
+        
 
         spawnDamageParticle();
 
@@ -32,6 +33,22 @@ public class EnemyHealth : MonoBehaviour
         {
             Debug.Log("Death Damage: " + damage);
             enemyDeath();
+            healthBar.enabled = false;
+            healthBackground.enabled = false;
+        }
+        else
+        {
+
+            healthPct = health / maxHealth;
+            healthBar.fillAmount = healthPct;
+
+            if (health < maxHealth)
+            {
+                healthBar.enabled = true;
+                healthBackground.enabled = true;
+            }
+
+            //Knockback();
         }
     }
 
@@ -52,6 +69,8 @@ public class EnemyHealth : MonoBehaviour
         //wait 5 seconds and dissappear
         Destroy(this.gameObject, 5f);
     }
+
+
     public void drops()
     {
         if (Random.Range(1, 5) == 1)
@@ -86,7 +105,6 @@ public class EnemyHealth : MonoBehaviour
 
         Renderer[] bodyParts = gameObject.GetComponentsInChildren<Renderer>();
 
-
         foreach (Renderer part in bodyParts)
         {
             if (part.gameObject.GetComponent<Collider>() != null)
@@ -96,7 +114,6 @@ public class EnemyHealth : MonoBehaviour
             }
 
             //find some way to fade the material out
-
             part.material.color = new Color(part.material.color.r * fadeVal, part.material.color.g * fadeVal, part.material.color.b * fadeVal, part.material.color.a);
             //part.material.color = new Color(part.material.color.r, part.material.color.g, part.material.color.b, part.material.color.a * fadeVal);
 
@@ -124,6 +141,7 @@ public class EnemyHealth : MonoBehaviour
             Instantiate(knightParticle, particleSpawn, Quaternion.identity);
         }
     }
+
 }
 
 
