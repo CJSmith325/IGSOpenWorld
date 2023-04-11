@@ -11,7 +11,8 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Time.timeScale = 0.0f;
+        //Time.timeScale = 0.0f;
+        Time.timeScale = 1f;
 
         outsideScreen.SetActive(true);
 
