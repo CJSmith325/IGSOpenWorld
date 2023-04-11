@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/KeyTest.unity
     guid: a65be9d8f4d250c4ea5ba9ed4aefc7ba
+  - enabled: 1
+    path: Assets/Scenes/Planet attack.unity
+    guid: fa3dd62d99851df4bb9c3837d9d2b7e9
   m_configObjects: {}

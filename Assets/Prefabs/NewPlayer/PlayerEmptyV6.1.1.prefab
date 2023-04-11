@@ -371,14 +371,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Fedor, for the last time.
-
-
-    * The glass Door button is behind the
-    castle.
-
-
-    Now stop sending doves or I''m gonna catapult you.'
+  m_Text: "Fedor, for the last time.\n\n* The glass-door button \nis behind the bandit
+    castle.\n\nNow stop sending doves \nor I'm gonna catapult you."
 --- !u!1 &498754123427645189
 GameObject:
   m_ObjectHideFlags: 0
@@ -4764,7 +4758,7 @@ RectTransform:
   m_GameObject: {fileID: 5361269457874020521}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.6771374, y: 6.9018226, z: 3.9123302}
+  m_LocalScale: {x: 7.796226, y: 6.9018226, z: 3.9123302}
   m_Children: []
   m_Father: {fileID: 2092676760402779085}
   m_RootOrder: 0
@@ -4860,7 +4854,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5531403905534720979}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -5371,7 +5365,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 404ce57e0a7440849bc3876b8840e36c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d611cb8f2a7d8d4f8d6a594033c7127, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5887,7 +5881,7 @@ RectTransform:
   m_GameObject: {fileID: 7980292422823536731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.47145355, y: 0.47145355, z: 0.47145355}
   m_Children: []
   m_Father: {fileID: 6016134248001186636}
   m_RootOrder: 0

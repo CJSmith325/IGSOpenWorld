@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AreaCastle : MonoBehaviour
 {
@@ -19,4 +20,5 @@ public class AreaCastle : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
 
     }
+
 }
