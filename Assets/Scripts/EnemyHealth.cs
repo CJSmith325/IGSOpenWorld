@@ -12,19 +12,20 @@ public class EnemyHealth : MonoBehaviour
     public GameObject critParticle;
     public Vector3 particleSpawn;
     public GameObject[] drop;
-
+    public HUD hud;
     public Image healthBar, healthBackground;
     
     void Start()
     {
         health = maxHealth;
+        hud = GameObject.Find("Player").GetComponent<HUD>();
     }
 
 
 
     public void enemyTakeDamage(float damage)
     {
-        health -= damage + Random.Range(0, 10);
+        health -= damage + Random.Range(0, hud.bonusDamage);
         
 
         spawnDamageParticle();

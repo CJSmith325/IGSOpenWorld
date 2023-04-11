@@ -12,6 +12,7 @@ public class HUD : MonoBehaviour
     public float PlayerRegen;
     public float PlayerHealth;
     public float PlayerMaxHealth;
+    public float bonusDamage;
 
     public Image HealthImage;
     public Image bloodEffect;
