@@ -15,12 +15,15 @@ public class EnemyAi : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
+    private Animator enemyAnim;
+
     //Patroling
     public Vector3 walkPoint;
     bool walkPointSet;
     public float walkPointRange;
 
     //Attacking
+    public float attackChance;
     public float timeBetweenAttacks;
     bool alreadyAttacked;
     public int attackDamage;
@@ -38,6 +41,7 @@ public class EnemyAi : MonoBehaviour
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         playerHUD = GameObject.Find("Player").GetComponent<HUD>();
+        enemyAnim = gameObject.GetComponent<Animator>();
     }
 
     private void Update()
@@ -62,7 +66,15 @@ public class EnemyAi : MonoBehaviour
         {
             if (!playerInSightRange && !playerInAttackRange) Patroling();
             if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-            if (playerInAttackRange && playerInSightRange) AttackPlayer();
+            if (playerInAttackRange && playerInSightRange)
+            {
+
+                float rand = Random.Range(0, 1);
+                if (rand <= attackChance)
+                {
+                    AttackPlayer();
+                }
+            }
         }
     }
 
@@ -97,9 +109,19 @@ public class EnemyAi : MonoBehaviour
     private void ChasePlayer()
     {
         agent.SetDestination(player.position);
+        Walk();
     }
 
     private void AttackPlayer()
+    {
+        
+        //trigger animation and deal damage
+        Attack();
+        Invoke("DamagePlayer", .5f);
+       
+    }
+
+    private void DamagePlayer()
     {
         //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
@@ -109,15 +131,14 @@ public class EnemyAi : MonoBehaviour
         transform.LookAt(LookDirection);
 
 
+
+        ///Attack code here
+        //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+        //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+        //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
         if (!alreadyAttacked)
         {
-            ///Attack code here
-            //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-
             //GetComponent<Animator>().Play("EnemyAxeSwing");
-
             playerHUD.TakeDamage(attackDamage + Random.Range(0, 10));
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -131,9 +152,36 @@ public class EnemyAi : MonoBehaviour
 
     private void Idle()
     {
+        enemyAnim.SetTrigger("Idle");
+
         if (guardposition.transform.position != Guard.transform.position)
         {
             Guard.position = guardposition.transform.position;
         }
+    }
+
+    private void Attack()
+    {
+        float rand = Random.Range(0,1);
+
+        if (rand < .5f)
+            enemyAnim.SetTrigger("Attack 1");
+        else if (rand <= 1f)
+            enemyAnim.SetTrigger("Attack 2");
+
+    }
+
+    private void Walk()
+    {
+        enemyAnim.SetTrigger("Walking");
+    }
+
+    public void Knockback()
+    {
+
+        Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+
+
+
     }
 }
