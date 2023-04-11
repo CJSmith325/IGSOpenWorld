@@ -25,7 +25,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void enemyTakeDamage(float damage)
     {
-        health -= damage + Random.Range(0, 10);
+        health -= damage + Random.Range(0, hud.bonusDamage);
         
 
         spawnDamageParticle();
