@@ -99,28 +99,35 @@ public class ShrekScript : MonoBehaviour
         agent.SetDestination(player.position);
     }
 
-    private void AttackPlayer()
+    private void AttackPlayer(int attackType)
     {
-        //Make sure enemy doesn't move
-        agent.SetDestination(transform.position);
-
-        //transform.LookAt(player);
-        Vector3 LookDirection = new Vector3(player.transform.position.x, this.transform.position.y, player.transform.position.z);
-        transform.LookAt(LookDirection);
-
-
-        if (!alreadyAttacked)
+        if (attackType == 1)
         {
-            ///Attack code here
-            //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            //Make sure enemy doesn't move
+            agent.SetDestination(transform.position);
 
-            //GetComponent<Animator>().Play("EnemyAxeSwing");
+            //transform.LookAt(player);
+            Vector3 LookDirection = new Vector3(player.transform.position.x, this.transform.position.y, player.transform.position.z);
+            transform.LookAt(LookDirection);
 
-            playerHUD.TakeDamage(attackDamage + Random.Range(0, 20));
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+
+            if (!alreadyAttacked)
+            {
+                ///Attack code here
+                //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+                //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+                //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+
+                //GetComponent<Animator>().Play("EnemyAxeSwing");
+
+                playerHUD.TakeDamage(attackDamage + Random.Range(0, 20));
+                alreadyAttacked = true;
+                Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            }
+        }
+        else if (attackType == 2)
+        {
+
         }
     }
 
