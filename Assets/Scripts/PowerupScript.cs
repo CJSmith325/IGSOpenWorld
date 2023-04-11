@@ -46,11 +46,11 @@ public class PowerupScript : MonoBehaviour
         }
         else if (powerupType == 2)
         {
-            
+            hud.bonusDamage += 3;
         }
         else if (powerupType == 3 && playerMovement.speed < 14.99f)
         {
-            playerMovement.speed += 0.05f;
+            playerMovement.speed += 0.04f;
         }
         powerupType = 0;
     }
