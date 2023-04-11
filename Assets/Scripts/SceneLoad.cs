@@ -20,6 +20,10 @@ public class SceneLoad : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void OnShrekClick()
+    {
+        SceneManager.LoadScene("Planet attack");
+    }
 
     public void OnExitClick()
     {

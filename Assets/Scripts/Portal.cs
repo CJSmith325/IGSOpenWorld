@@ -9,11 +9,28 @@ public class Portal : MonoBehaviour
     public GameObject outsideScreen;
     bool isWin = false;
 
-    void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            SceneManager.LoadScene("Planet attack");
-        }
+        Time.timeScale = 0.0f;
+
+        outsideScreen.SetActive(true);
+
+        isWin = true;
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+
+
     }
+    public void Yes()
+    {
+        OnShrekClick();
+    }
+    public void OnShrekClick()
+    {
+        SceneManager.LoadScene("Planet attack");
+        Time.timeScale = 1f;
+    }
+
 }
