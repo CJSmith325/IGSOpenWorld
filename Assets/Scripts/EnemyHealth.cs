@@ -15,15 +15,12 @@ public class EnemyHealth : MonoBehaviour
     public HUD hud;
     public Image healthBar, healthBackground;
 
-    private Animator enemyAnim;
     
     void Start()
     {
         health = maxHealth;
-        //Updated upstream
         hud = GameObject.Find("Player").GetComponent<HUD>();
 
-        enemyAnim = gameObject.GetComponent<Animator>();
     }
 
 
@@ -54,7 +51,6 @@ public class EnemyHealth : MonoBehaviour
                 healthBackground.enabled = true;
             }
 
-            Knockback();
         }
     }
 
@@ -124,6 +120,7 @@ public class EnemyHealth : MonoBehaviour
             //part.material.color = new Color(part.material.color.r, part.material.color.g, part.material.color.b, part.material.color.a * fadeVal);
 
         }
+
     }
 
     public void spawnDamageParticle()
@@ -149,7 +146,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void Knockback()
     {
-        enemyAnim.SetTrigger("Knockback");
+
     }
 
 }

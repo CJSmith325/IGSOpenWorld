@@ -38,7 +38,9 @@ public class EnemyAi : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
+        guardposition = gameObject;
+        Guard = gameObject.transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         playerHUD = GameObject.Find("Player").GetComponent<HUD>();
         enemyAnim = gameObject.GetComponent<Animator>();
@@ -108,7 +110,10 @@ public class EnemyAi : MonoBehaviour
 
     private void ChasePlayer()
     {
+
         agent.SetDestination(player.position);
+        //Debug.Log(agent.destination.ToString());
+        //agent.isStopped = false;
         Walk();
     }
 
