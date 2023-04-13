@@ -175,13 +175,4 @@ public class EnemyAi : MonoBehaviour
     {
         enemyAnim.SetTrigger("Walking");
     }
-
-    public void Knockback()
-    {
-
-        Rigidbody rb = gameObject.GetComponent<Rigidbody>();
-
-
-
-    }
 }
