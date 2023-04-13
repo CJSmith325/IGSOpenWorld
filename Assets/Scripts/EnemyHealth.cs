@@ -81,15 +81,18 @@ public class EnemyHealth : MonoBehaviour
         {
             Instantiate(drop[0], transform.position, Quaternion.identity);
         }
-        if (Random.Range(1, 10) == 1)
+        else if (Random.Range(1, 10) == 1)
         {
             Instantiate(drop[1], transform.position, Quaternion.identity);
         }
-        if (Random.Range(1, 10) == 1)
+        else if (Random.Range(1, 10) == 1)
         {
             Instantiate(drop[2], transform.position, Quaternion.identity);
         }
-
+        if (drop[3] != null)
+        {
+            Instantiate(drop[3], transform.position, Quaternion.identity);
+        }
     }
 
     IEnumerator StartFade()
