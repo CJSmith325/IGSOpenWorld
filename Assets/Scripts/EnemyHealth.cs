@@ -15,12 +15,13 @@ public class EnemyHealth : MonoBehaviour
     public HUD hud;
     public Image healthBar, healthBackground;
 
+    private Animator enemyAnim;
     
     void Start()
     {
         health = maxHealth;
         hud = GameObject.Find("Player").GetComponent<HUD>();
-
+        enemyAnim = gameObject.GetComponent<Animator>();
     }
 
 
@@ -29,7 +30,6 @@ public class EnemyHealth : MonoBehaviour
     {
         health -= damage + Random.Range(0, hud.bonusDamage);
         
-
         spawnDamageParticle();
 
         if (health <= 0)
@@ -44,6 +44,8 @@ public class EnemyHealth : MonoBehaviour
 
             healthPct = health / maxHealth;
             healthBar.fillAmount = healthPct;
+
+            Knockback();
 
             if (health < maxHealth)
             {
@@ -146,7 +148,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void Knockback()
     {
-
+        enemyAnim.SetTrigger("Knockback");
     }
 
 }

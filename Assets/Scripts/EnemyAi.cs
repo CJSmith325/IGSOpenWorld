@@ -52,6 +52,12 @@ public class EnemyAi : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
+        EnemyMove();
+    }
+
+
+    private void EnemyMove()
+    {
         //Check if the enemy is a guard
         if (this.gameObject.tag == "Guard")
         {
@@ -79,8 +85,6 @@ public class EnemyAi : MonoBehaviour
             }
         }
     }
-
-
 
     private void Patroling()
     {
