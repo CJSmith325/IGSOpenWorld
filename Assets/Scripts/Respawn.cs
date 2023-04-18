@@ -7,13 +7,17 @@ public class Respawn : MonoBehaviour
 {
     public static Respawn Instance;
     public bool TouchingSpawn = false;
+
     public Transform Player;
     public Transform SpawnPoint;
+
     private Vector3 SpawnLocation;
+
     public KeyCode respawn;
     public KeyCode SetSpawn;
     //public GameObject GameOverCanvas;
     //public GameObject Reach;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +26,7 @@ public class Respawn : MonoBehaviour
         SpawnLocation = SpawnPoint.transform.position; //Sets Player SpawnLocation to Spawnpoint Position.
         Player = GameObject.FindGameObjectWithTag("Player").transform;
     }
+    
     // Update is called once per frame
     void Update()
     {
@@ -38,6 +43,7 @@ public class Respawn : MonoBehaviour
         
 
     }
+    
     //Respawn Function
     public void PlayerRespawn()
     {

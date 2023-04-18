@@ -5,6 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoad : MonoBehaviour
 {
+
+    public static SceneLoad Instance;
+
+    public void Start()
+    {
+        Instance = this;
+    }
+
+    public void LoadScene(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
+
     public void OnStartClick() 
     {
         SceneManager.LoadScene("PlayTest");
