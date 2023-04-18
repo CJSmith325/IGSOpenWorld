@@ -8,6 +8,7 @@ public class PowerupScript : MonoBehaviour
     public HUD hud;
     public PlayerMovement playerMovement;
     public int powerupType;
+    public AudioSource source;
     public AudioClip powerupSound;
     public Rigidbody rb;
     public Transform player;
@@ -28,6 +29,7 @@ public class PowerupScript : MonoBehaviour
         if (distanceFromPlayer.magnitude <= 1.6f)
         {
             PickupPowerup();
+            source.PlayOneShot(powerupSound);
             Destroy(gameObject);
         }
     }
