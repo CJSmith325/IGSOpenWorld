@@ -11,7 +11,7 @@ public class EnemyHealth : MonoBehaviour
     public GameObject knightParticle;
     public GameObject critParticle;
     public Vector3 particleSpawn;
-    public GameObject[] drop;
+    public GameObject[] drop = new GameObject[4];
     public HUD hud;
     public Image healthBar, healthBackground;
 
@@ -89,10 +89,10 @@ public class EnemyHealth : MonoBehaviour
         {
             Instantiate(drop[2], transform.position, Quaternion.identity);
         }
-        if (drop[3] != null)
+        /*if (drop[3] != null)
         {
             Instantiate(drop[3], transform.position, Quaternion.identity);
-        }
+        }*/
     }
 
     IEnumerator StartFade()
