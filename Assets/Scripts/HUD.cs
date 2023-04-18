@@ -42,7 +42,7 @@ public class HUD : MonoBehaviour
             if (PlayerHealth > PlayerMaxHealth)
             {
                 PlayerHealth = PlayerMaxHealth;
-                regenTimer = 10f;
+                regenTimer = 5f;
 
             }
 
@@ -66,7 +66,7 @@ public class HUD : MonoBehaviour
         {
             //death mechanic go here
             PlayerHealth = 0;
-            //Respawn.Instance.GameOver();
+            Respawn.Instance.GameOver();
 
         }
     }

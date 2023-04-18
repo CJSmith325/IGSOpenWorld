@@ -19,8 +19,8 @@ public class PlayerHealth : MonoBehaviour
         health -= amount;
         if(health <= 0)
         {
-            Destroy(gameObject); //If damage takes the player to zero or below, then the player will be destroyed
+
+            //Destroy(gameObject); //If damage takes the player to zero or below, then the player will be destroyed
         }
     }
-
 }
