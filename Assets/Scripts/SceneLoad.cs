@@ -35,7 +35,7 @@ public class SceneLoad : MonoBehaviour
 
     public void OnShrekClick()
     {
-        SceneManager.LoadScene("Planet attack");
+        SceneManager.LoadScene("Cutscene");
     }
 
     public void OnExitClick()

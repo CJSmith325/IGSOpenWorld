@@ -30,7 +30,7 @@ public class Portal : MonoBehaviour
     }
     public void OnShrekClick()
     {
-        SceneManager.LoadScene("Planet attack");
+        SceneManager.LoadScene("Cutscene");
         Time.timeScale = 1f;
     }
 

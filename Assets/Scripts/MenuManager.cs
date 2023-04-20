@@ -23,7 +23,7 @@ public class MenuManager : MonoBehaviour
     public void Shrek()
     {
         Debug.Log("Start");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
     }
 
 }
