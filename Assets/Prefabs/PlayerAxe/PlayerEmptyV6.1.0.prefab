@@ -1894,6 +1894,7 @@ MonoBehaviour:
   PlayerRegen: 0.3
   PlayerHealth: 100
   PlayerMaxHealth: 100
+  bonusDamage: 0
   HealthImage: {fileID: 6342370216825095366}
   bloodEffect: {fileID: 2658026803404416003}
   regenTimer: 0
@@ -1987,6 +1988,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   capsule: {fileID: 7129378671843206447}
+  mainCam: {fileID: 0}
 --- !u!54 &5714359946268140533
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2899,6 +2901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359944769026931}
+  farticleEffect: {fileID: 0}
   baseDamage: 80
   damageValue: 0
   durability: 0
@@ -2907,6 +2910,7 @@ MonoBehaviour:
   critMod: 1.6
   critChance: 0.15
   critDamage: 0
+  crit: 0
   attackCooldown: 1
   isSword: 0
   canAttack: 0
@@ -3032,6 +3036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359944790920673}
+  farticleEffect: {fileID: 0}
   baseDamage: 80
   damageValue: 0
   durability: 0
@@ -3040,6 +3045,7 @@ MonoBehaviour:
   critMod: 1.6
   critChance: 0.15
   critDamage: 0
+  crit: 0
   attackCooldown: 1
   isSword: 1
   canAttack: 0
@@ -3165,6 +3171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359945004358814}
+  farticleEffect: {fileID: 0}
   baseDamage: 80
   damageValue: 0
   durability: 0
@@ -3173,6 +3180,7 @@ MonoBehaviour:
   critMod: 1.6
   critChance: 0.15
   critDamage: 0
+  crit: 0
   attackCooldown: 1
   isSword: 1
   canAttack: 0
@@ -3298,6 +3306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359945154423498}
+  farticleEffect: {fileID: 0}
   baseDamage: 80
   damageValue: 0
   durability: 0
@@ -3306,6 +3315,7 @@ MonoBehaviour:
   critMod: 1.6
   critChance: 0.15
   critDamage: 0
+  crit: 0
   attackCooldown: 1
   isSword: 0
   canAttack: 0
@@ -3431,6 +3441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359945204546933}
+  farticleEffect: {fileID: 0}
   baseDamage: 80
   damageValue: 0
   durability: 0
@@ -3439,6 +3450,7 @@ MonoBehaviour:
   critMod: 1.6
   critChance: 0.15
   critDamage: 0
+  crit: 0
   attackCooldown: 1
   isSword: 0
   canAttack: 0
@@ -3564,6 +3576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359945276046634}
+  farticleEffect: {fileID: 0}
   baseDamage: 80
   damageValue: 0
   durability: 0
@@ -3572,6 +3585,7 @@ MonoBehaviour:
   critMod: 1.6
   critChance: 0.15
   critDamage: 0
+  crit: 0
   attackCooldown: 1
   isSword: 0
   canAttack: 0
@@ -3697,6 +3711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359945316420870}
+  farticleEffect: {fileID: 0}
   baseDamage: 80
   damageValue: 0
   durability: 0
@@ -3705,6 +3720,7 @@ MonoBehaviour:
   critMod: 1.6
   critChance: 0.15
   critDamage: 0
+  crit: 0
   attackCooldown: 1
   isSword: 1
   canAttack: 0
@@ -3830,6 +3846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359945367839338}
+  farticleEffect: {fileID: 0}
   baseDamage: 80
   damageValue: 0
   durability: 0
@@ -3838,6 +3855,7 @@ MonoBehaviour:
   critMod: 1.6
   critChance: 0.15
   critDamage: 0
+  crit: 0
   attackCooldown: 1
   isSword: 0
   canAttack: 0
@@ -3963,6 +3981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359945540355357}
+  farticleEffect: {fileID: 0}
   baseDamage: 80
   damageValue: 0
   durability: 0
@@ -3971,6 +3990,7 @@ MonoBehaviour:
   critMod: 1.6
   critChance: 0.15
   critDamage: 0
+  crit: 0
   attackCooldown: 1
   isSword: 1
   canAttack: 0
@@ -4096,6 +4116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359945645859009}
+  farticleEffect: {fileID: 0}
   baseDamage: 80
   damageValue: 0
   durability: 0
@@ -4104,6 +4125,7 @@ MonoBehaviour:
   critMod: 1.6
   critChance: 0.15
   critDamage: 0
+  crit: 0
   attackCooldown: 1
   isSword: 0
   canAttack: 0
@@ -4229,6 +4251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359946832909184}
+  farticleEffect: {fileID: 0}
   baseDamage: 80
   damageValue: 0
   durability: 0
@@ -4237,6 +4260,7 @@ MonoBehaviour:
   critMod: 1.6
   critChance: 0.15
   critDamage: 0
+  crit: 0
   attackCooldown: 1
   isSword: 1
   canAttack: 0
@@ -4362,6 +4386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5714359946848909476}
+  farticleEffect: {fileID: 0}
   baseDamage: 80
   damageValue: 0
   durability: 0
@@ -4370,6 +4395,7 @@ MonoBehaviour:
   critMod: 1.6
   critChance: 0.15
   critDamage: 0
+  crit: 0
   attackCooldown: 1
   isSword: 1
   canAttack: 0

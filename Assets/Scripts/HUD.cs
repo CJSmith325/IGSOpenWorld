@@ -50,6 +50,7 @@ public class HUD : MonoBehaviour
 
         fill = (PlayerHealth * 100 / PlayerMaxHealth);
         HealthImage.fillAmount = fill / 100;
+        //HealthImage.fillAmount = Mathf.Lerp(fill/100, (PlayerHealth * 100 / PlayerMaxHealth), Time.deltaTime * .8f);
 
         healthPct = (float)PlayerHealth / (float)PlayerMaxHealth;
 
