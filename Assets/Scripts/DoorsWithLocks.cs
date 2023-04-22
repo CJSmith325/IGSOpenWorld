@@ -27,7 +27,7 @@ public class DoorsWithLocks : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Reach")
+        if (other.gameObject.tag == "Reach" && hasKey)
         {
             inReach = true;
             openText.SetActive(true);
@@ -50,9 +50,9 @@ public class DoorsWithLocks : MonoBehaviour
             locked = false;
             hasKey = true;
         }
-
         else
         {
+            locked = true;
             hasKey = false;
         }
 
@@ -78,6 +78,10 @@ public class DoorsWithLocks : MonoBehaviour
             door.SetBool("open", true);
             door.SetBool("closed", false);
             //doorSound.Play();
+            pickUpKeys.Instance.keyImage.SetActive(false);
+            keyINV.SetActive(false);
+            openText.SetActive(false);
+
         }
 
     }

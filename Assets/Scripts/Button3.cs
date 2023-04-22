@@ -16,6 +16,29 @@ public class Button3 : MonoBehaviour
     void Start()
     {
         text.SetActive(false);
+        powerIsOn = false;
+
+        ANI.SetBool("PuzzleDoor", false);
+        ANI.SetBool("PuzzleOpen", true);
+    
+
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetButtonDown("Interact") && inReach)
+        {
+            powerIsOn = true;
+
+            ANI.SetBool("PuzzleOpen", true);
+            ANI.SetBool("PuzzleDoor", true);
+
+            inReach = false;
+            text.SetActive(false);
+        }
+
 
 
     }
@@ -38,27 +61,6 @@ public class Button3 : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetButtonDown("Interact") && inReach)
-        {
-            powerIsOn = true;
-        }
 
-        if (powerIsOn)
-        {
-            ANI.SetBool("PuzzleOpen", true);
-            ANI.SetBool("PuzzleDoor", true);
-
-            inReach = false;
-            text.SetActive(false);
-        }
-
-        if (!powerIsOn)
-        {
-            ANI.SetBool("PuzzleDoor", false);
-            ANI.SetBool("PuzzleOpen", true);
-        }
-    }
 }
+

@@ -16,8 +16,6 @@ public class ButtonActivate : MonoBehaviour
     void Start()
     {
         text.SetActive(false);
-
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -44,16 +42,15 @@ public class ButtonActivate : MonoBehaviour
         if (Input.GetButtonDown("Interact") && inReach)
         {
             powerIsOn = true;
-        }
 
-        if (powerIsOn)
-        {
             ANI.SetBool("OpenGlassDoor", true);
             ANI.SetBool("IdleGlassDoor", true);
 
             inReach = false;
             text.SetActive(false);
+
         }
+        
 
         if (!powerIsOn)
         {

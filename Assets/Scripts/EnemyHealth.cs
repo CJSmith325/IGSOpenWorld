@@ -58,6 +58,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void enemyDeath()
     {
+        //Transform deathTransform;   //position and rotation at time of death
+
         //find animator and play death animation
         Animator enemyAnim = gameObject.GetComponent<Animator>();
         enemyAnim.SetTrigger("Death");
@@ -65,8 +67,10 @@ public class EnemyHealth : MonoBehaviour
         //remove movement scripts
         EnemyAi enemyAi = gameObject.GetComponent<EnemyAi>();
         EnemyMovement enemyMove = gameObject.GetComponent<EnemyMovement>();
+
         enemyAi.enabled = false;
         enemyMove.enabled = false;
+        
 
         StartCoroutine(StartFade());
         drops();

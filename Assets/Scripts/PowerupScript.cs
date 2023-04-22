@@ -30,7 +30,6 @@ public class PowerupScript : MonoBehaviour
         {
             PickupPowerup();
             source.PlayOneShot(powerupSound);
-            Destroy(gameObject);
         }
     }
     /*public void OnCollisionEnter(Collision collision)
@@ -46,6 +45,7 @@ public class PowerupScript : MonoBehaviour
         if (powerupType == 1 && hud.PlayerMaxHealth < 399)
         {
             hud.PlayerMaxHealth += 3;
+            hud.PlayerHealth = hud.PlayerMaxHealth;
         }
         else if (powerupType == 2)
         {
@@ -56,5 +56,6 @@ public class PowerupScript : MonoBehaviour
             playerMovement.speed += 0.04f;
         }
         powerupType = 0;
+        Destroy(gameObject);
     }
 }

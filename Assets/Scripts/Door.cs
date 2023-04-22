@@ -52,8 +52,7 @@ public class Door : MonoBehaviour
         door.SetBool("closed", false);
         //doorSound.Play();
 
-        pickUpKeys.Instance.keyImage.SetActive(false);
-
+        
     }
 
     void DoorCloses()
