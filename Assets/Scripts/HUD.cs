@@ -22,10 +22,13 @@ public class HUD : MonoBehaviour
     public float healthPct;
 
     public GameObject GameOverCanvas;
+    public GameObject HUDCanvas;
 
     private void Start()
     {
         Instance = this;
+        HUDCanvas.SetActive(true);
+        GameOverCanvas.SetActive(false);
     }
 
 
