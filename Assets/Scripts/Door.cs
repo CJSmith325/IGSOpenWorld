@@ -12,9 +12,11 @@ public class Door : MonoBehaviour
     public bool inReach;
 
 
+
     void Start()
     {
         inReach = false;
+        DoorCloses();
     }
 
     void OnTriggerEnter(Collider other)
@@ -41,10 +43,6 @@ public class Door : MonoBehaviour
         {
             DoorOpens();
         }
-        else
-        {
-            DoorCloses();
-        }
     }
 
     void DoorOpens()
@@ -53,6 +51,9 @@ public class Door : MonoBehaviour
         door.SetBool("open", true);
         door.SetBool("closed", false);
         //doorSound.Play();
+
+        pickUpKeys.Instance.keyImage.SetActive(false);
+
     }
 
     void DoorCloses()

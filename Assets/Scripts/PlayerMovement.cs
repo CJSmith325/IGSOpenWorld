@@ -75,20 +75,14 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.LeftControl) && isGrounded) //Crouch code
         {
+
+            controller.Move(move * (speed * crouchMod) * Time.deltaTime);
+
             Debug.DrawRay((this.transform.position), Vector3.down * 3f, Color.cyan);        //testing ray
 
             currentY = Mathf.Lerp(currentY, crouchY, 10f * Time.deltaTime);
             capsule.transform.localScale = new Vector3(1.0f, currentY, 1.0f);
 
-            if (z > 0 && slideTimer > 0)
-            {
-                controller.Move(move * speed * slideMod * Time.deltaTime);
-                slideTimer -= Time.deltaTime;
-            }
-            else
-            {
-                controller.Move(move * speed * crouchMod * Time.deltaTime);
-            }
 
         }
         else
