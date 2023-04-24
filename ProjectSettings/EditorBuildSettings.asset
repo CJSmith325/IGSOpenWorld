@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/KeyTest.unity
     guid: a65be9d8f4d250c4ea5ba9ed4aefc7ba
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cutscene.unity
     guid: 6a58262d75d8c04419f4ec244186d159
   - enabled: 0
