@@ -48,8 +48,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Instance = this;
         currentY = startY;
-
-        moveSound = NoisyBoi.Instance.Walking;
+        //moveSound = NoisyBoi.Instance.Walking;
     }
 
     // Update is called once per frame
@@ -128,10 +127,7 @@ public class PlayerMovement : MonoBehaviour
             moveSound.volume = Random.Range(.7f, 1f);
             moveSound.Play();
         }
-        else
-        {
-            moveSound.Stop();
-        }
+        
     }
 
     public void HitMarker(float damage)

@@ -112,8 +112,7 @@ public class WeaponSwitch : MonoBehaviour
     public void EquipWeapon(int activeWeapon)
     {
 
-        NoisyBoi.Instance.WeaponEquip.Play();
-
+       
         for (int i = 0; i < totalWeapons; i++)
         {
             if (i == activeWeapon)
