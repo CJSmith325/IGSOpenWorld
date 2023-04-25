@@ -32,6 +32,8 @@ public class PowerupScript : MonoBehaviour
             source.PlayOneShot(powerupSound);
         }
     }
+
+    
     /*public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -40,6 +42,8 @@ public class PowerupScript : MonoBehaviour
             Destroy(gameObject);
         }
     }*/
+
+
     public void PickupPowerup()
     {
         if (powerupType == 1 && hud.PlayerMaxHealth < 399)

@@ -16,6 +16,8 @@ public class WeaponSwitch : MonoBehaviour
     public GameObject axe1, axe2, axe3, dblAxe1, dblAxe2, dblAxe3, sword1, sword2, sword3, bigSword1, bigSword2, bigSword3;
 
 
+    public bool[] unlocked = new bool[12];
+
     public Image weaponIcon;
     public Sprite[] weaponWheel = new Sprite[12];
 
@@ -29,7 +31,6 @@ public class WeaponSwitch : MonoBehaviour
 
         weapons = new GameObject[totalWeapons];
         weaponIcon.sprite = weaponWheel[activeWeapon];
-
 
         weapons[0] = axe1;
         weapons[1] = axe2;
@@ -58,35 +59,36 @@ public class WeaponSwitch : MonoBehaviour
         weapons[10].SetActive(false);
         weapons[11].SetActive(false);
 
-    }
+        unlocked[0] = true;
+        unlocked[1] = false;
+        unlocked[2] = false;
+        unlocked[3] = true;
+        unlocked[4] = false;
+        unlocked[5] = false;
+        unlocked[6] = true;
+        unlocked[7] = false;
+        unlocked[8] = false;
+        unlocked[9] = true;
+        unlocked[10] = false;
+        unlocked[11] = false;
 
-    private void Update()
-    {
-        
     }
 
     public void SwitchWeapons()
     {
         activeWeapon = (activeWeapon + 1) % totalWeapons;
-        weaponIcon.sprite = weaponWheel[activeWeapon];
 
-        for (int i = 0; i < totalWeapons; i++)
+        if(unlocked[activeWeapon])
         {
-            if (i == activeWeapon)
-            {
-                //Set the chosen Weapon to active
-                weapons[i].SetActive(true);
-                //crosshairs[i].enabled = true;
-                //Txt[i].enabled = true;
-            }
-            else
-            {
-                //set all other Weapons to inactive
-                weapons[i].SetActive(false);
-                //crosshairs[i].enabled = false;
-                //Txt[i].enabled = false;
-            }
+            weaponIcon.sprite = weaponWheel[activeWeapon];
+
+            EquipWeapon(activeWeapon);
         }
+        else
+        {
+            SwitchWeapons();
+        }
+
     }
 
     public void SwitchWeapons(int num)
@@ -94,22 +96,26 @@ public class WeaponSwitch : MonoBehaviour
         activeWeapon = num;
         weaponIcon.sprite = weaponWheel[num];
 
+        EquipWeapon(activeWeapon);
+    }
+
+    public void EquipWeapon(int activeWeapon)
+    {
+
         for (int i = 0; i < totalWeapons; i++)
         {
             if (i == activeWeapon)
             {
                 //Set the chosen Weapon to active
                 weapons[i].SetActive(true);
-                //crosshairs[i].enabled = true;
-                //Txt[i].enabled = true;
             }
             else
             {
                 //set all other Weapons to inactive
                 weapons[i].SetActive(false);
-                //crosshairs[i].enabled = false;
-                //Txt[i].enabled = false;
+
             }
         }
     }
+
 }
