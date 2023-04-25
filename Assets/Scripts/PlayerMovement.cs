@@ -95,10 +95,6 @@ public class PlayerMovement : MonoBehaviour
             capsule.transform.localScale = new Vector3(1.0f, currentY, 1.0f);
             controller.Move(move * speed * Time.deltaTime);
             slideTimer = 1f;
-
-            NoisyBoi.Instance.Walking.Play();
-
-
         }
 
         //Jump Code
@@ -125,6 +121,12 @@ public class PlayerMovement : MonoBehaviour
             velocity.y += gravity * 0.15f * Time.deltaTime;
         }
         controller.Move(velocity * Time.deltaTime);
+
+        if(/*controller.isGrounded &&*/ controller.velocity.magnitude > 1.5f /*&& !moveSound.isPlaying*/)
+        {
+            NoisyBoi.Instance.Walking.volume = Random.Range(.7f, 1f);
+            NoisyBoi.Instance.Walking.Play();
+        }
         
     }
 
