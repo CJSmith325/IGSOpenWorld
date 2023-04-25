@@ -20,6 +20,24 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
+    public void TutorialWorld()
+    {
+        Debug.Log("Start");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+    }
+
+    public void OpenWorld()
+    {
+        Debug.Log("Start");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+    }
+
+    public void PickWorld()
+    {
+        Debug.Log("Start");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
+    }
+
     public void Shrek()
     {
         Debug.Log("Start");

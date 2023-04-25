@@ -38,6 +38,21 @@ public class SceneLoad : MonoBehaviour
         SceneManager.LoadScene("Cutscene");
     }
 
+    public void PickWorldClick()
+    {
+        SceneManager.LoadScene("PickGame");
+    }
+
+    public void TutorialWorldClick()
+    {
+        SceneManager.LoadScene("PlayTest");
+    }
+
+    public void OpenWorldClick()
+    {
+        SceneManager.LoadScene("NewTerrain");
+    }
+
     public void OnExitClick()
     {
         Application.Quit();

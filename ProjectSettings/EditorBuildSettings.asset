@@ -11,12 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayTest.unity
     guid: a546b631cf281bf4dbec02693a3aa70d
-  - enabled: 0
-    path: Assets/Scenes/OpenWorldScene.unity
-    guid: 24f9c43041e33924793d0665a5496330
+  - enabled: 1
+    path: Assets/Scenes/NewTerrain.unity
+    guid: 52a65da7066c6ff4bb80411e2e95ae4d
   - enabled: 1
     path: Assets/Scenes/Instructions.unity
     guid: d8606ef7168802244840056319b692b5
+  - enabled: 1
+    path: Assets/Scenes/PickGame.unity
+    guid: 075eaa22acfba56448cff67ed47e006d
   - enabled: 0
     path: Assets/Scenes/CastleTesting.unity
     guid: 26b8362cb97e6d54081f6a57a4df9a77
