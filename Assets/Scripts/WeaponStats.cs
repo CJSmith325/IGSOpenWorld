@@ -111,6 +111,7 @@ public class WeaponStats : MonoBehaviour
     public void SwordSwing()
     {
         canAttack = false;
+        NoisyBoi.Instance.SwordSwing.Play();
 
         CriticalHit();
 
@@ -125,6 +126,7 @@ public class WeaponStats : MonoBehaviour
     public void SwordChop()
     {
         canAttack = false;
+        NoisyBoi.Instance.SwordSwing.Play();
 
         CriticalHit();
 
@@ -139,6 +141,7 @@ public class WeaponStats : MonoBehaviour
     public void AxeSwing()
     {
         canAttack = false;
+        NoisyBoi.Instance.AxeSwing.Play();
 
         CriticalHit();
 
@@ -154,6 +157,7 @@ public class WeaponStats : MonoBehaviour
     {
         //axe chop code
         canAttack = false;
+        NoisyBoi.Instance.AxeSwing.Play();
 
         CriticalHit();
 
@@ -180,6 +184,7 @@ public class WeaponStats : MonoBehaviour
             damageValue = baseDamage;
             attackSound = slash;
             crit = false;
+
         }
         else
         {

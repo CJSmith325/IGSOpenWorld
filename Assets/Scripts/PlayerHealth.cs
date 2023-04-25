@@ -20,6 +20,9 @@ public class PlayerHealth : MonoBehaviour
    public void TakeDamage(int amount) //amount = how much damage the player takes
     {
         health -= amount;
+
+        NoisyBoi.Instance.PlayerHit.Play();
+
         if(health <= 0)
         {
 

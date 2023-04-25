@@ -122,10 +122,10 @@ public class PlayerMovement : MonoBehaviour
         }
         controller.Move(velocity * Time.deltaTime);
 
-        if(controller.isGrounded && controller.velocity.magnitude > 1.5f && !moveSound.isPlaying)
+        if(/*controller.isGrounded &&*/ controller.velocity.magnitude > 1.5f /*&& !moveSound.isPlaying*/)
         {
-            moveSound.volume = Random.Range(.7f, 1f);
-            moveSound.Play();
+            NoisyBoi.Instance.Walking.volume = Random.Range(.7f, 1f);
+            NoisyBoi.Instance.Walking.Play();
         }
         
     }

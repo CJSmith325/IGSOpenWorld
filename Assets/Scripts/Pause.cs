@@ -61,9 +61,12 @@ public class Pause : MonoBehaviour
             Debug.Log("cursor locked");
             //pauseCanvas.enabled = true;
             pauseCanvas.SetActive(true);
-            //isPaused = true;
-        }
-        else if (Time.timeScale == 0 /*&& isPaused*/)
+                        //isPaused = true;
+                        NoisyBoi.Instance.MenuMusic.Stop();
+
+
+                    }
+                    else if (Time.timeScale == 0 /*&& isPaused*/)
         {
             Debug.Log("About to change timescale");
             Time.timeScale = 1;
@@ -74,6 +77,8 @@ public class Pause : MonoBehaviour
             //pauseCanvas.enabled = false;
             pauseCanvas.SetActive(false);
             //isPaused = false;
+
+            NoisyBoi.Instance.MenuMusic.Play();
 
         }
     }

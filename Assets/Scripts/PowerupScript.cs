@@ -60,6 +60,8 @@ public class PowerupScript : MonoBehaviour
             playerMovement.speed += 0.04f;
         }
         powerupType = 0;
+
+        NoisyBoi.Instance.PowerUp.Play();
         Destroy(gameObject);
     }
 }
