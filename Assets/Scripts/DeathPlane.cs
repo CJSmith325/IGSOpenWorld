@@ -8,6 +8,6 @@ public class DeathPlane : MonoBehaviour
     {
         Debug.Log(other.gameObject.name + " whip");
 
-        Destroy(other.gameObject);
+        HUD.Instance.TakeDamage(1000);
     }
 }
