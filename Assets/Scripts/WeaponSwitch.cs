@@ -96,12 +96,23 @@ public class WeaponSwitch : MonoBehaviour
         activeWeapon = num;
         weaponIcon.sprite = weaponWheel[num];
 
-        EquipWeapon(activeWeapon);
+        if (unlocked[activeWeapon])
+        {
+            weaponIcon.sprite = weaponWheel[activeWeapon];
+
+            EquipWeapon(activeWeapon);
+        }
+        else
+        {
+            SwitchWeapons();
+        }
+
     }
 
     public void EquipWeapon(int activeWeapon)
     {
 
+       
         for (int i = 0; i < totalWeapons; i++)
         {
             if (i == activeWeapon)
