@@ -1022,6 +1022,7 @@ MonoBehaviour:
   bigSword1: {fileID: 4571511409064508596}
   bigSword2: {fileID: 4571511408287982293}
   bigSword3: {fileID: 4571511408041798185}
+  unlocked: 000000000000000000000000
   weaponIcon: {fileID: 6698355463942041098}
   weaponWheel:
   - {fileID: 21300000, guid: d227d0153a8d540449acfd5d0fc473e0, type: 3}
@@ -2953,13 +2954,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weapon: {fileID: 4571511407741444658}
   farticleEffect: {fileID: 3404488243158560179, guid: ef890bb414bb93b4cbd79581b9b8c1b7, type: 3}
-  baseDamage: 90
+  baseDamage: 145
   damageValue: 0
   durability: 0
   attackSpeed: 0.85
   attackRange: 0
   critMod: 1.6
-  critChance: 0.15
+  critChance: 0.4
   critDamage: 0
   crit: 0
   attackCooldown: 1
@@ -3088,13 +3089,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weapon: {fileID: 4571511407769244190}
   farticleEffect: {fileID: 3404488243158560179, guid: ef890bb414bb93b4cbd79581b9b8c1b7, type: 3}
-  baseDamage: 80
+  baseDamage: 140
   damageValue: 0
   durability: 0
   attackSpeed: 0.6
   attackRange: 0
-  critMod: 1.6
-  critChance: 0.15
+  critMod: 2
+  critChance: 0.25
   critDamage: 0
   crit: 0
   attackCooldown: 1.5
@@ -3223,7 +3224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weapon: {fileID: 4571511407790755166}
   farticleEffect: {fileID: 6006663109009624746, guid: 88cb3764ecf171a47ae6a18227a90faa, type: 3}
-  baseDamage: 85
+  baseDamage: 115
   damageValue: 0
   durability: 0
   attackSpeed: 0.4
@@ -3358,13 +3359,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weapon: {fileID: 4571511408041798185}
   farticleEffect: {fileID: 3404488243158560179, guid: ef890bb414bb93b4cbd79581b9b8c1b7, type: 3}
-  baseDamage: 120
+  baseDamage: 175
   damageValue: 0
   durability: 0
   attackSpeed: 0.25
   attackRange: 0
   critMod: 1.6
-  critChance: 0.15
+  critChance: 0.2
   critDamage: 0
   crit: 0
   attackCooldown: 2
@@ -3628,7 +3629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weapon: {fileID: 4571511408276067399}
   farticleEffect: {fileID: 7646035821882979712, guid: 78b7f267a85f8a345b96a2ac4dc3ce28, type: 3}
-  baseDamage: 70
+  baseDamage: 85
   damageValue: 0
   durability: 0
   attackSpeed: 0.4
@@ -3763,7 +3764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weapon: {fileID: 4571511408287982293}
   farticleEffect: {fileID: 6006663109009624746, guid: 88cb3764ecf171a47ae6a18227a90faa, type: 3}
-  baseDamage: 150
+  baseDamage: 140
   damageValue: 0
   durability: 0
   attackSpeed: 0.25
@@ -3898,7 +3899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weapon: {fileID: 4571511408461284862}
   farticleEffect: {fileID: 6006663109009624746, guid: 88cb3764ecf171a47ae6a18227a90faa, type: 3}
-  baseDamage: 65
+  baseDamage: 75
   damageValue: 0
   durability: 0
   attackSpeed: 0.6
@@ -4033,13 +4034,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weapon: {fileID: 4571511408511832641}
   farticleEffect: {fileID: 3404488243158560179, guid: ef890bb414bb93b4cbd79581b9b8c1b7, type: 3}
-  baseDamage: 100
+  baseDamage: 150
   damageValue: 0
   durability: 0
   attackSpeed: 0.4
   attackRange: 0
   critMod: 1.6
-  critChance: 0.15
+  critChance: 0.5
   critDamage: 0
   crit: 0
   attackCooldown: 1.5
@@ -4168,7 +4169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weapon: {fileID: 4571511408577606570}
   farticleEffect: {fileID: 6006663109009624746, guid: 88cb3764ecf171a47ae6a18227a90faa, type: 3}
-  baseDamage: 75
+  baseDamage: 95
   damageValue: 0
   durability: 0
   attackSpeed: 0.85

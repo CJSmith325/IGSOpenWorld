@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public static PlayerHealth Instance;
+
     public int health; //Keeps track of current health
     public int maxHealth = 100; //Max full health
 
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
         health = maxHealth;
     }
 
