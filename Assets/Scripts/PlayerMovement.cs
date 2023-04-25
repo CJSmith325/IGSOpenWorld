@@ -42,10 +42,14 @@ public class PlayerMovement : MonoBehaviour
     public Camera mainCam;
     Vector3 hitPoint;
 
+    AudioSource moveSound;
+
     private void Start()
     {
         Instance = this;
         currentY = startY;
+
+        moveSound = NoisyBoi.Instance.Walking;
     }
 
     // Update is called once per frame
@@ -72,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && isGrounded)         //Sprint Code 
         {
             controller.Move(move * (speed * sprintMod) * Time.deltaTime);
+            //moveSound = NoisyBoi.Instance.Sprinting;
         }
         else if (Input.GetKey(KeyCode.LeftControl) && isGrounded) //Crouch code
         {
@@ -117,6 +122,16 @@ public class PlayerMovement : MonoBehaviour
             velocity.y += gravity * 0.15f * Time.deltaTime;
         }
         controller.Move(velocity * Time.deltaTime);
+
+        if(controller.isGrounded && controller.velocity.magnitude > 1.5f && !moveSound.isPlaying)
+        {
+            moveSound.volume = Random.Range(.7f, 1f);
+            moveSound.Play();
+        }
+        else
+        {
+            moveSound.Stop();
+        }
     }
 
     public void HitMarker(float damage)
